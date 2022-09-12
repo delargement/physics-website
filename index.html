@@ -32,35 +32,64 @@
 <!--        </div>-->
 <!--    </div>-->
     <div class="text-xl max-w-[40rem]  font-serif text-[1rem] leading-7">
-        <p class="my-8">
-            Picture a billiard table, with two billiard balls (we’ll label them A and B) placed at the bottom two corners. As you hit both balls towards the middle at the same time, they will rebound into the top two holes. A will go to the left, while B will go to the right. If someone then walks in, even though he didn’t see the collision, he would still know that the ball that that ends up on the left must be A and the one on the right must be B.
-        </p>
-        <img alt="billiard table" src="public/billiard%201.svg" class="object-cover">
-
         <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
-            Memory Systems
+            A simple analogy
         </h2>
 
+        <p class="my-8">
+            Picture a billiard table, with two billiard balls, labeled A and B, set at the left two corners. If you simultaneously hit both balls at an angle towards the middle of the board, we would expect them to collide and rebound into the top two holes. A will go to the top right hole, while B will go to the bottom right. Nothing surprising here.
+        </p>
+        <img alt="billiard table" src="public/billiard%201.svg" class="object-cover my-8">
+
+        <p class="my-8">
+            In fact, once you know the initial position of the two balls and the angle and their initial velocity, you already know which ball will end up where. If someone asks, you could even describe their trajectories!
+        </p>
+         <p class="my-8">
+        This fact, which we take for granted, is a feature of classical mechanics:
+        </p>
+
         <div class="shadow-md">
-            <p class="p-3 border">Cwce ef wfe fewf wef</p>
+            <p class="p-3 border">
+                <b>(Classical)</b>
+                The state of a physical system is specified by the positions and momenta of the particles, and this determines the rest of the system such as the trajectories.
+            </p>
         </div>
 
-        <aside class="ml-[45rem] absolute border-dotted p-5 italic">
-           <p>Aside me</p>
-        </aside>
         <p class="my-8">
-            I believe the answer is yes, but not for the reasons you may have heard. Many articles proffer expert testimony that Go is harder than chess, making this victory more impressive. Or they say that we didn’t expect computers to win at Go for another 10 years, so this is a bigger breakthrough. Some articles offer the (correct!) observation that there are more potential positions in Go than in chess, but they don’t explain why this should cause more difficulty for computers than for humans.
+However, this is where quantum mechanics diverges from classical mechanics. Definite trajectories of the particle violate the intrinsic uncertainty to the state of a physical system.
         </p>
+        <p class="my-8">
+The Heisenberg uncertainty principle suggests that the balls may head off at slightly different angles, or maybe one moves faster than the other. In whichever case, how do we know whether the balls collide, rebound and remain on the same side, or pass each other and switch sides? Well, we can't. And it isn't for lack of trying. Not the sharpest cue stick, or finest ruler can overcome the Heisenberg uncertainty principle.
+        </p>
+
+        <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
+            Statevectors
+        </h2>
+
+        <p class="my-8">
+            However, there is one way to know for sure, which is to reach into the right billiard holes and check for oneself. But up until then, we don’t know whether the system’s state is in (top = A, bottom = B) or (top = B, bottom = A). (for brevity, we’ll specify these states as |AB> and |BA> respectively, inspired by typical quantum physics notation).
+        </p>
+
+
+        <aside class="ml-[45rem] absolute border-l-4 bg-slate-100 p-5 font-sans">
+        <h5 class="font-bold text-2xl font-extrabold text-blue-800">QUIZ</h5>
+       <p class="max-w-2xl"><b>Q: Which of the following is a fire hydrant?</b></p>
+        <ul class="p-5 space-y-3">
+                <li class="group">
+                    <button class="shadow-md p-2 rounded-lg w-full group-hover:bg-green-500 group-hover:text-white">
+                        This one
+                    </button>
+                </li>
+                <li class="group">
+                    <button class="shadow-md p-2 rounded-lg w-full group-hover:bg-red-500 group-hover:text-white">This one</button>
+                </li>
+
+        </ul>
+        </aside>
 
 
         <img alt="billiard table" src="public/billiard%202.svg" class="object-cover">
 
-                <p class="my-8">
-            I believe the answer is yes, but not for the reasons you may have heard. Many articles proffer expert testimony that Go is harder than chess, making this victory more impressive. Or they say that we didn’t expect computers to win at Go for another 10 years, so this is a bigger breakthrough. Some articles offer the (correct!) observation that there are more potential positions in Go than in chess, but they don’t explain why this should cause more difficulty for computers than for humans.
-        </p>
-                <p class="my-8">
-            I believe the answer is yes, but not for the reasons you may have heard. Many articles proffer expert testimony that Go is harder than chess, making this victory more impressive. Or they say that we didn’t expect computers to win at Go for another 10 years, so this is a bigger breakthrough. Some articles offer the (correct!) observation that there are more potential positions in Go than in chess, but they don’t explain why this should cause more difficulty for computers than for humans.
-        </p>
 
     </div>
 </main>
