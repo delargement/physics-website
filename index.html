@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
     <script>
         tailwind.config = {
             theme: {
@@ -12,7 +16,13 @@
                 },
             }
         }
+    window.MathJax = {
+  loader: {load: ['[tex]/physics']},
+  tex: {packages: {'[+]': ['physics']}}
+};
     </script>
+
+
 <!--    Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,6 +68,8 @@
         <p class="my-8">
 However, this is where quantum mechanics diverges from classical mechanics. Definite trajectories of the particle violate the intrinsic uncertainty to the state of a physical system.
         </p>
+
+        <img alt="billiard table" src="public/billiard%202.svg" class="object-cover">
         <p class="my-8">
 The Heisenberg uncertainty principle suggests that the balls may head off at slightly different angles, or maybe one moves faster than the other. In whichever case, how do we know whether the balls collide, rebound and remain on the same side, or pass each other and switch sides? Well, we can't. And it isn't for lack of trying. Not the sharpest cue stick, or finest ruler can overcome the Heisenberg uncertainty principle.
         </p>
@@ -67,28 +79,56 @@ The Heisenberg uncertainty principle suggests that the balls may head off at sli
         </h2>
 
         <p class="my-8">
-            However, there is one way to know for sure, which is to reach into the right billiard holes and check for oneself. But up until then, we don’t know whether the system’s state is in (top = A, bottom = B) or (top = B, bottom = A). (for brevity, we’ll specify these states as |AB> and |BA> respectively, inspired by typical quantum physics notation).
+            However, there is one way to know for sure, which is to reach into the right billiard holes and check for oneself. But up until then, we don’t know whether the system’s state is in (top = A, bottom = B) or (top = B, bottom = A). (for brevity, we’ll specify these states as \(\ket{AB}\) and \(\ket{BA}\) respectively, inspired by typical quantum physics notation). So how do we move forward?
+        </p>
+
+        <aside class="ml-[45rem] absolute border-l-4 bg-slate-100 p-5 font-sans">
+        <h5 class="font-bold text-2xl font-extrabold text-blue-800">Stop to think</h5>
+            <p class="max-w-2xl"><b>Why square root?</b></p>
+            <p>fjdkjf dklfj dskj </p>
+        </aside>
+
+        <p class="my-8">
+The trick is to describe the system probabilistically, using the framework statevectors. Suppose a system can take on any number of states \(\ket{i}\), each with probability \(|a_i|^2\) for some (complex) number \(a_i\). Then the system’s state can be written as the statevector \(\ket{\psi} = a_1 \ket{1} + a_2 \ket{2} + \ldots \). This encodes all the information of the system.
+        </p>
+
+        <p class="my-8">
+            Back to the original problem, assuming that \(\ket{AB}\) and \(\ket{BA}\) are equally probable, there are two ways we can denote the system’s statevector.
+        </p>
+
+        <p class="my-8">
+            First note that the statevector should have some symmetry between \( \ket{AB} \) and \( \ket{BA} \). Intuitively, \( \ket{\psi} = \frac{1}{\sqrt{2}} \ket{AB} + \frac{1}{\sqrt{2}} \ket{BA} \) would seem to do the job. But, due to reasons out of our scope, \(\ket{\psi} = \frac{1}{\sqrt{2}} \ket{AB} - \frac{1}{\sqrt{2}} \ket{BA} \) also turns out to be a fit description.
+        </p>
+
+         <aside class="ml-[45rem] absolute border-l-4 bg-slate-100 p-5 font-sans">
+        <h5 class="font-bold text-2xl font-extrabold text-blue-800">Stop to think</h5>
+            <p class="max-w-2xl"><b>When is a particle a boson or a fermion?</b></p>
+            <p>fjdkjf dklfj dskj </p>
+        </aside>
+
+        <p class="my-8">
+            Particles which obey the former relation are called <b>bosons</b>, while particles which obey the latter are <b>fermions</b>. But as we’ll this minute change of sign makes all the difference!
         </p>
 
 
-        <aside class="ml-[45rem] absolute border-l-4 bg-slate-100 p-5 font-sans">
-        <h5 class="font-bold text-2xl font-extrabold text-blue-800">QUIZ</h5>
-       <p class="max-w-2xl"><b>Q: Which of the following is a fire hydrant?</b></p>
-        <ul class="p-5 space-y-3">
-                <li class="group">
-                    <button class="shadow-md p-2 rounded-lg w-full group-hover:bg-green-500 group-hover:text-white">
-                        This one
-                    </button>
-                </li>
-                <li class="group">
-                    <button class="shadow-md p-2 rounded-lg w-full group-hover:bg-red-500 group-hover:text-white">This one</button>
-                </li>
-
-        </ul>
-        </aside>
 
 
-        <img alt="billiard table" src="public/billiard%202.svg" class="object-cover">
+<!--        <aside class="ml-[45rem] absolute border-l-4 bg-slate-100 p-5 font-sans">-->
+<!--        <h5 class="font-bold text-2xl font-extrabold text-blue-800">QUIZ</h5>-->
+<!--       <p class="max-w-2xl"><b>Q: Which of the following is a fire hydrant?</b></p>-->
+<!--        <ul class="p-5 space-y-3">-->
+<!--                <li class="group">-->
+<!--                    <button class="shadow-md p-2 rounded-lg w-full group-hover:bg-green-500 group-hover:text-white">-->
+<!--                        This one-->
+<!--                    </button>-->
+<!--                </li>-->
+<!--                <li class="group">-->
+<!--                    <button class="shadow-md p-2 rounded-lg w-full group-hover:bg-red-500 group-hover:text-white">This one</button>-->
+<!--                </li>-->
+<!--        </ul>-->
+<!--        </aside>-->
+
+
 
 
     </div>
