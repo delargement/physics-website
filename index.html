@@ -97,7 +97,7 @@ The trick is to describe the system probabilistically, using the framework state
         </p>
 
         <p class="my-8">
-            First note that the statevector should have some symmetry between \( \ket{AB} \) and \( \ket{BA} \). Intuitively, \( \ket{\psi} = \frac{1}{\sqrt{2}} \ket{AB} + \frac{1}{\sqrt{2}} \ket{BA} \) would seem to do the job. But, due to reasons out of our scope, \(\ket{\psi} = \frac{1}{\sqrt{2}} \ket{AB} - \frac{1}{\sqrt{2}} \ket{BA} \) also turns out to be a fit description.
+            First note that the statevector should have some symmetry between \( \ket{AB} \) and \( \ket{BA} \). Intuitively, \( \ket{\psi} = \frac{1}{\sqrt{2}} \ket{AB} + \frac{1}{\sqrt{2}} \ket{BA} \) would seem to do the job. But, \(\ket{\psi} = \frac{1}{\sqrt{2}} \ket{AB} - \frac{1}{\sqrt{2}} \ket{BA} \) works just as well as we only care about square of the coefficients, i.e. \((-1)^2 = 1 \).
         </p>
 
          <aside class="ml-[45rem] absolute border-l-4 bg-slate-100 p-5 font-sans">
@@ -107,8 +107,30 @@ The trick is to describe the system probabilistically, using the framework state
         </aside>
 
         <p class="my-8">
-            Particles which obey the former relation are called <b>bosons</b>, while particles which obey the latter are <b>fermions</b>. But as we’ll this minute change of sign makes all the difference!
+            Particles which obey the former relation are called <b>bosons</b>, while particles which obey the latter are <b>fermions</b>. But as we’ll see this minute difference in sign makes all the difference!
         </p>
+
+      <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
+            Properties of Bosons and Fermions
+        </h2>
+
+        <p class="my-8">
+            We will now see how the sign of the statevector affects the properties of the system.
+        </p>
+        <p class="my-8">
+            Using the equation for fermions  \( \ket{\psi} = \frac{1}{\sqrt{2}} \ket{AB} - \frac{1}{\sqrt{2}} \ket{BA} \) observe that if we let \(A=B\), we get  \( \ket{\psi} = \frac{1}{\sqrt{2}} \ket{AA} - \frac{1}{\sqrt{2}} \ket{AA} =0\). This is also known as the Pauli's exclusion principle which states that two identical fermions cannot occupy the same quantum state within a quantum system.
+            </p>
+        <p class="my-8">
+            On the other hand, for bosons we observe that \( \ket{\psi} = \frac{1}{\sqrt{2}} \ket{AA} + \frac{1}{\sqrt{2}} \ket{AA} \)  does not vanish, meaning there is no limit on the number of bosons that can be put in the same quantum state. In fact, you bosons tend to clump together, as compared to distinguishable quantum particles as we'll soon see.
+        </p>
+
+        <p class="my-8">
+            To get a feel for the statistics of the particles, we can use simple combinatorics.
+        </p>
+
+        <h3 class="font-extrabold text-3xl font-sans my-5 text-blue-400">
+            Distinguishable particles
+        </h3>
 
 
 
