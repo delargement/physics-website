@@ -51,7 +51,7 @@
         </p>
         <div class="ml-[45rem] absolute w-1/4">
             <img alt="billiard table" src="public/billiard%201.svg" class="object-cover ">
-            <hr class="mt-6 mb-3 h-[7.5px] bg-gray-200 border-0 bg-stone-400 w-24 ml-2">
+            <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
             <p class="text-sm ml-2">
                 You are only as healthy as you feel.
             </p>
@@ -75,7 +75,14 @@
 However, this is where quantum mechanics diverges from classical mechanics. Definite trajectories of the particle violate the intrinsic uncertainty to the state of a physical system.
         </p>
 
-        <img alt="billiard table" src="public/billiard%202.svg" class="object-cover my-8 ml-[45rem] absolute w-1/4">
+        <div class="ml-[45rem] absolute w-1/4">
+            <img alt="billiard table" src="public/billiard%202.svg" class="object-cover">
+            <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
+            <p class="text-sm ml-2">
+                You are only as healthy as you feel.
+            </p>
+        </div>
+
         <p class="my-8">
 The Heisenberg uncertainty principle suggests that the balls may head off at slightly different angles, or maybe one moves faster than the other. In whichever case, how do we know whether the balls collide, rebound and remain on the same side, or pass each other and switch sides? Well, we can't. And it isn't for lack of trying. Not the sharpest cue stick, or finest ruler can overcome the Heisenberg uncertainty principle.
         </p>
@@ -127,7 +134,7 @@ The trick is to describe the system probabilistically, using the framework state
             Using the equation for fermions  \( \ket{\psi} = \frac{1}{\sqrt{2}} \ket{AB} - \frac{1}{\sqrt{2}} \ket{BA} \) observe that if we let \(A=B\), we get  \( \ket{\psi} = \frac{1}{\sqrt{2}} \ket{AA} - \frac{1}{\sqrt{2}} \ket{AA} =0\). This is also known as the Pauli's exclusion principle which states that two identical fermions cannot occupy the same quantum state within a quantum system.
             </p>
         <p class="my-8">
-            On the other hand, for bosons we observe that \( \ket{\psi} = \frac{1}{\sqrt{2}} \ket{AA} + \frac{1}{\sqrt{2}} \ket{AA} \)  does not vanish, meaning there is no limit on the number of bosons that can be put in the same quantum state. In fact, you bosons tend to clump together, as compared to distinguishable quantum particles as we'll soon see.
+            On the other hand, for bosons we observe that \( \ket{\psi} = \frac{1}{\sqrt{2}} \ket{AA} + \frac{1}{\sqrt{2}} \ket{AA} \)  does not vanish, meaning there is no limit on the number of bosons that can be put in the same quantum state. In fact, bosons tend to clump together, as compared to distinguishable quantum particles as we'll soon see.
         </p>
 
         <p class="my-8">
@@ -141,6 +148,14 @@ The trick is to describe the system probabilistically, using the framework state
         <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
             Fermions and Ferromagnets
         </h2>
+
+        <div class="ml-[45rem] absolute w-1/4">
+            <img alt="billiard table" src="public/magnetdipole.png" class="object-cover">
+            <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
+            <p class="text-sm ml-2">
+                You are only as healthy as you feel.
+            </p>
+        </div>
 
         <p class="my-8">
 
@@ -161,17 +176,17 @@ The trick is to describe the system probabilistically, using the framework state
                         <label id='eb_label' class='eb_label font' for="field" title="External field">External field strength</label>
                     </div>
                     <div>
-                    <input style="width:150px;" class="font-sans my-auto inline-block align-middle" type="range" id="field" min=-5 max=5 step=0.00001 value=0.0 oninput='update_field()' onchange="update_field()"></input>
+                    <input style="width:150px;" class="font-sans my-auto inline-block align-middle" type="range" id="field" min=-5 max=5 step=0.00001 value=0.0 oninput='update_field()' onchange="update_field()">
                     <span onclick='' class='pl-2 eb_span my-auto inline-block align-middle ' id="label_field">0</span>
                     </div>
                 </div>
 
                     <div class="px-5">
                         <div>
-                            <label id='eb2_label' class='eb_label font' for="num" title="Lattice size">Lattice size</label>
+                            <label id='eb2_label' class='eb_label' for="num" title="Lattice size">Lattice size</label>
                         </div>
                         <div>
-                            <input style="width:150px;" class="font-sans my-auto inline-block align-middle" type="range" id="changenum" min=4 max=8 step=1 value=7 oninput='change_num()' onchange="change_num()"></input>
+                            <input style="width:150px;" class="font-sans my-auto inline-block align-middle" type="range" id="changenum" min=4 max=8 step=1 value=7 oninput='change_num()' onchange="change_num()">
                             <span onclick='' class='pl-2 eb_span my-auto inline-block align-middle ' id="label_changenum">128</span>
                         </div>
                     </div>
@@ -179,72 +194,7 @@ The trick is to describe the system probabilistically, using the framework state
                 </div>
             </div>
         </div>
-
-<!--        <div id='panelcontainer' class="ml-[30rem] max-w-4xl">-->
-<!--            &lt;!&ndash; ===================  add control panel items between here ============== &ndash;&gt;-->
-<!--            <div id='panel'>-->
-<!--                <pre class='code' id='label_time'>initializing</pre>-->
-<!--                <pre class='code' id='label_energy'>initializing</pre>-->
-<!--                <pre class='code' id='label_mag'>initializing</pre>-->
-<!--                <br>-->
-<!--                <div id='isinggraph'>-->
-<!--                    <canvas id='canvas-graph' height=150 width=370></canvas>-->
-<!--                </div>-->
-<!--                <br>-->
-<!--                <div>-->
-<!--                    <label class='eb_label' for="temp" title="Temperature">Temperature</label>-->
-<!--                    <input style='width:150px;' type="range" id="temp" min=-5 max=2 step=0.000001 value=0 oninput='update_temp()' onchange="update_temp()"></input>-->
-<!--                    <span onclick='dotextbox(this.id)' class='eb_span' id="label_temp"></span>-->
-<!--                    <input style='width: 80px; display: none;' id='label_temp_input' type='text' value='' onblur='undotextbox(this.id)'>-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <label class='eb_label' for="field" title="External field">Field</label>-->
-<!--                    <input style="width:150px;" type="range" id="field" min=-5 max=5 step=0.00001 value=0.0 oninput='update_field()' onchange="update_field()"></input>-->
-<!--                    <span onclick='dotextbox(this.id)' class='eb_span' id="label_field"></span>-->
-<!--                    <input style='width: 80px; display: none;' id='label_field_input' type='text' value='' onblur='undotextbox(this.id)'>-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <label class='eb_label' for="frames" title="Samples per redraw">Sweep skip</label>-->
-<!--                    <input style="width:150px;" type="range" id="frames" min=-2 max=2 step=0.00001 value=0 oninput='update_frames()' onchange="update_frames()"></input>-->
-<!--                    <span onclick='dotextbox(this.id)' class='eb_span' id="label_frames"></span>-->
-<!--                    <input style='width: 80px; display: none;' id='label_frames_input' type='text' value='' onblur='undotextbox(this.id)'>-->
-<!--                </div>-->
-<!--                <div class="withspace">-->
-<!--                    <label class='eb_label' for='method'>Update method:</label>-->
-<!--                    <input type='radio' name='method' onclick='update_method()' checked=true id='method_metropolis' value='metropolis'>metropolis</input>-->
-<!--                    <input type='radio' name='method' onclick='update_method()' id='method_wolff' value='wolff'>wolff</input>-->
-<!--                </div>-->
-<!--                <div class="withspace">-->
-<!--                    <label class='eb_label' for='num'>Lattice size</label>-->
-<!--                    <select id='changenum' onchange='change_num()'>-->
-<!--                        <option value="512">512</option>-->
-<!--                        <option value="256" selected="selected">256</option>-->
-<!--                        <option value="128">128</option>-->
-<!--                        <option value="64">64</option>-->
-<!--                        <option value="32">32</option>-->
-<!--                        <option value="16">16</option>-->
-<!--                    </select>-->
-<!--                </div>-->
-<!--                <div class="withspace">-->
-<!--                    <label class='eb_label' for='num'>Graph type</label>-->
-<!--                    &lt;!&ndash;<input type='text' id='num' value=0></input>-->
-<!--                    <input type='button' id='changenum' value='Change' onclick='change_num()'></input>&ndash;&gt;-->
-<!--                    <select id='changegraph' onchange='change_graph()'>-->
-<!--                        <option value="none">none</option>-->
-<!--                        <option value="energy" selected='selected'>e(t)</option>-->
-<!--                        <option value="mag">m(t)</option>-->
-<!--                        &lt;!&ndash;<option value="eavg">&lt;e&gt;(t)</option>&ndash;&gt;-->
-<!--                        &lt;!&ndash;<option value="mavg">&lt;m&gt;(t)</option>&ndash;&gt;-->
-<!--                    </select>-->
-<!--                </div>-->
-
-<!--            </div>-->
-<!--        </div>-->
         <script src="ising.js"></script>
-
-
-
-
 
 
         <aside class="ml-[45rem] absolute border-l-4 bg-slate-100 p-5 font-sans">
@@ -265,8 +215,6 @@ The trick is to describe the system probabilistically, using the framework state
         </aside>
 
 
-
-
     </div>
 
     <script>
@@ -283,6 +231,8 @@ The trick is to describe the system probabilistically, using the framework state
             console.log('yeah')
             falseans.classList.add('bg-red-500');
             falseans.classList.add('text-white');
+            trueans.classList.add('bg-green-500');
+	        trueans.classList.add('text-white');
         });
 
     </script>
