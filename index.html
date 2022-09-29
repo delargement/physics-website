@@ -49,7 +49,7 @@
         <p class="my-8">
             Picture a billiard table, with two billiard balls, labeled A and B, set at the left two corners. If you simultaneously hit both balls at an angle towards the middle of the board, we would expect them to collide and rebound into the top two holes. A will go to the top right hole, while B will go to the bottom right. Nothing surprising here.
         </p>
-        <div class="ml-[45rem] absolute w-1/4">
+        <div class="left-[60rem] absolute w-1/4">
             <img alt="billiard table" src="public/billiard%201.svg" class="object-cover ">
             <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
             <p class="text-sm ml-2">
@@ -60,8 +60,9 @@
         <p class="my-8">
             In fact, once you know the initial position of the two balls and the angle and their initial velocity, you already know which ball will end up where. If someone asks, you could even describe their trajectories!
         </p>
-         <p class="my-8">
-        This fact, which we often take for granted, is a feature of classical mechanics:
+
+        <p class="my-8">
+            This fact, which we often take for granted, is a feature of classical mechanics:
         </p>
 
         <div class="shadow-md">
@@ -72,10 +73,10 @@
         </div>
 
         <p class="my-8">
-However, this is where quantum mechanics diverges from classical mechanics. Definite trajectories of the particle violate the intrinsic uncertainty to the state of a physical system.
+            However, this is where quantum mechanics diverges from classical mechanics. Definite trajectories of the particle violate the intrinsic uncertainty to the state of a physical system.
         </p>
 
-        <div class="ml-[45rem] absolute w-1/4">
+        <div class="left-[60rem] absolute w-1/4">
             <img alt="billiard table" src="public/billiard%202.svg" class="object-cover">
             <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
             <p class="text-sm ml-2">
@@ -84,7 +85,7 @@ However, this is where quantum mechanics diverges from classical mechanics. Defi
         </div>
 
         <p class="my-8">
-The Heisenberg uncertainty principle suggests that the balls may head off at slightly different angles, or maybe one moves faster than the other. In whichever case, how do we know whether the balls collide, rebound and remain on the same side, or pass each other and switch sides? Well, we can't. And it isn't for lack of trying. Not the sharpest cue stick, or finest ruler can overcome the Heisenberg uncertainty principle.
+            The Heisenberg uncertainty principle suggests that the balls may head off at slightly different angles, or maybe one moves faster than the other. In whichever case, how do we know whether the balls collide, rebound and remain on the same side, or pass each other and switch sides? Well, we can't. And it isn't for lack of trying. Not the sharpest cue stick, or finest ruler can overcome the Heisenberg uncertainty principle.
         </p>
 
         <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
@@ -95,14 +96,14 @@ The Heisenberg uncertainty principle suggests that the balls may head off at sli
             However, there is one way to know for sure, which is to reach into the billiard holes and check them for oneself. But up until then, we don’t know whether the system’s state is in (top = A, bottom = B) or (top = B, bottom = A). (for brevity, we’ll specify these states as \(\ket{AB}\) and \(\ket{BA}\) respectively, inspired by typical quantum physics notation). So how do we move forward?
         </p>
 
-        <aside class="ml-[45rem] absolute border-l-4 bg-slate-100 p-5 font-sans">
-        <h5 class="font-bold text-2xl font-extrabold text-blue-800">Stop to think</h5>
+        <aside class="left-[60rem] absolute border-l-4 bg-slate-100 p-5 font-sans">
+            <h5 class="font-bold text-2xl font-extrabold text-blue-800">Stop to think</h5>
             <p class="max-w-2xl"><b>Why square root?</b></p>
             <p>fjdkjf dklfj dskj </p>
         </aside>
 
         <p class="my-8">
-The trick is to describe the system probabilistically, using the framework statevectors. Suppose a system can take on any number of states \(\ket{i}\), each with probability \(|a_i|^2\) for some (complex) number \(a_i\). Then the system’s state can be written as the statevector \(\ket{\psi} = a_1 \ket{1} + a_2 \ket{2} + \ldots \). This encodes all the information of the system.
+            The trick is to describe the system probabilistically, using the framework statevectors. Suppose a system can take on any number of states \(\ket{i}\), each with probability \(|a_i|^2\) for some (complex) number \(a_i\). Then the system’s state can be written as the statevector \(\ket{\psi} = a_1 \ket{1} + a_2 \ket{2} + \ldots \). This encodes all the information of the system.
         </p>
 
         <p class="my-8">
@@ -113,8 +114,8 @@ The trick is to describe the system probabilistically, using the framework state
             First note that the statevector should have some symmetry between \( \ket{AB} \) and \( \ket{BA} \). Intuitively, \( \ket{\psi} = \frac{1}{\sqrt{2}} \ket{AB} + \frac{1}{\sqrt{2}} \ket{BA} \) would seem to do the job. But, \(\ket{\psi} = \frac{1}{\sqrt{2}} \ket{AB} - \frac{1}{\sqrt{2}} \ket{BA} \) works just as well as we only care about square of the coefficients, i.e. \((-1)^2 = 1 \).
         </p>
 
-         <aside class="ml-[45rem] absolute border-l-4 bg-slate-100 p-5 font-sans">
-        <h5 class="font-bold text-2xl font-extrabold text-blue-800">Stop to think</h5>
+        <aside class="left-[60rem] absolute border-l-4 bg-slate-100 p-5 font-sans">
+            <h5 class="font-bold text-2xl font-extrabold text-blue-800">Stop to think</h5>
             <p class="max-w-2xl"><b>When is a particle a boson or a fermion?</b></p>
             <p>fjdkjf dklfj dskj </p>
         </aside>
@@ -130,6 +131,17 @@ The trick is to describe the system probabilistically, using the framework state
         <p class="my-8">
             We will now see how the sign of the statevector affects the properties of the system.
         </p>
+
+
+<!--        <div class="ml-[45rem] absolute w-1/4">-->
+<!--            <img alt="billiard table" src="public/qmmagang.png" class="object-cover">-->
+<!--            <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">-->
+<!--            <p class="text-sm ml-2">-->
+<!--                You are only as healthy as you feel.-->
+<!--            </p>-->
+<!--        </div>-->
+
+
         <p class="my-8">
             Using the equation for fermions  \( \ket{\psi} = \frac{1}{\sqrt{2}} \ket{AB} - \frac{1}{\sqrt{2}} \ket{BA} \) observe that if we let \(A=B\), we get  \( \ket{\psi} = \frac{1}{\sqrt{2}} \ket{AA} - \frac{1}{\sqrt{2}} \ket{AA} =0\). This is also known as the Pauli's exclusion principle which states that two identical fermions cannot occupy the same quantum state within a quantum system.
             </p>
@@ -149,6 +161,15 @@ The trick is to describe the system probabilistically, using the framework state
             Fermions and Ferromagnets
         </h2>
 
+        <div class="">
+            <img alt="billiard table" src="public/qmseries.png" class="object-cover">
+            <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
+            <p class="text-sm ml-2">
+                Quantum numbers of an electron orbiting a nucleus.
+            </p>
+        </div>
+
+
         <div class="ml-[45rem] absolute w-1/4">
             <img alt="billiard table" src="public/magnetdipole.png" class="object-cover">
             <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
@@ -164,6 +185,8 @@ The trick is to describe the system probabilistically, using the framework state
         <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
             Bosons and Superconductivity
        </h2>
+
+
 
         <div id='ising' class="mx-auto max-w-[512px] font-sans bg-slate-100 shadow-lg pb-5 rounded my-10">
             <canvas id='canvas' height=512 width=512 class="mx-auto border-2 mt-0 pt-0 mb-3"></canvas>
@@ -183,14 +206,13 @@ The trick is to describe the system probabilistically, using the framework state
 
                     <div class="px-5">
                         <div>
-                            <label id='eb2_label' class='eb_label' for="num" title="Lattice size">Lattice size</label>
+                            <label id='eb2_label' class='eb_label' for="changenum" title="Lattice size">Lattice size</label>
                         </div>
                         <div>
                             <input style="width:150px;" class="font-sans my-auto inline-block align-middle" type="range" id="changenum" min=4 max=8 step=1 value=7 oninput='change_num()' onchange="change_num()">
                             <span onclick='' class='pl-2 eb_span my-auto inline-block align-middle ' id="label_changenum">128</span>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
