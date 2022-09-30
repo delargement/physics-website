@@ -43,6 +43,11 @@ var dodraw = true;
 var gh = 150;
 var gw = 370;
 
+// const white = [255, 255, 255];
+// const black = [0, 0, 0];
+const black = [212, 20, 90];
+const white = [131, 139, 197];
+
 function rgb(r,g,b) {
     return 'rgb('+r+','+g+','+b+')';
 }
@@ -89,10 +94,15 @@ function put_pixel(x, y, size, color){
     for (let i=0; i<size; i++){
         for (let j=0; j<size; j++){
             const ind = ((yoff+j)*gN*size + xoff+ i)*4;
-            const c = (color+1)/2 * 255;
-            gbufferdata[ind+0] = c;
-            gbufferdata[ind+1] = c;
-            gbufferdata[ind+2] = c;
+            if (color > 0){
+                gbufferdata[ind+0] = white[0];
+                gbufferdata[ind+1] = white[1];
+                gbufferdata[ind+2] = white[2];
+            } else {
+                gbufferdata[ind+0] = black[0];
+                gbufferdata[ind+1] = black[1];
+                gbufferdata[ind+2] = black[2];
+            }
             gbufferdata[ind+3] = 255;
         }
     }
@@ -419,7 +429,7 @@ function update_temp(){
         gT = 0;
     else
         gT = Math.pow(10, gTval);
-    document.getElementById('label_temp').innerHTML = toFixed(gT,6);
+    document.getElementById('label_temp').innerHTML = toFixed(gT,3);
     calculateFlipTable(gT, gfield);
 }
 function update_field(){
@@ -596,44 +606,6 @@ function calculateFlipTable(temp, field){
     wolfph = 1 - Math.exp( -2. * Math.abs(field) / temp );
 }
 
-/*function calculateFlipTable(temp){
-    gtable_de = [];
-    gtable_doflip = [];
-    gtable_flipprob = [];
-    for (var i=0; i<5; i++){
-        de = -2*(2*i - 4) - gfield;
-        arg = -de / temp;
-        gtable_de[i] = de;
-        gtable_doflip[i] = 1*(de<=0);
-        gtable_flipprob[i] = Math.exp(arg) * (temp > 0);
-    }
-    for (var i=0; i<5; i++){
-        de = 2*(2*i - 4) + gfield;
-        arg = -de / temp;
-        gtable_de[i+5] = de;
-        gtable_doflip[i+5] = 1*(de<=0);
-        gtable_flipprob[i+5] = Math.exp(arg) * (temp > 0);
-    }
-
-    wolfp = 1 - Math.exp( -2./temp );
-}
-
-function update_metropolis(){
-    var x = Math.floor(Math.random()*gN);
-    var y = Math.floor(Math.random()*gN);
-    var ind = x + y*gN;
-    var neigh = neighborCount(x, y, gN, gboard);
-
-    var ind2 = Math.round(neigh + 5*(gboard[ind]+1)/2);
-    if (gtable_doflip[ind2] || Math.random() < gtable_flipprob[ind2]){
-        gboard[ind] = -gboard[ind];
-        put_pixel(x, y, gpx_size, gboard[x+y*gN]);
-
-        genergy += 2.0*de/(gN*gN);
-        gmag += 2.0*gboard[ind]/(gN*gN);
-    }
-    gt += 1.0/(gN*gN);
-}*/
 
 /*===============================================================================
     initialization and drawing
@@ -682,9 +654,6 @@ var init = function() {
     c = document.getElementById('canvas');
     c.style.cursor = 'url('+empty.toDataURL()+')';
     ctx = c.getContext('2d');
-    // c2 = document.getElementById('canvas-graph');
-    // c2.style.cursor = 'url('+empty.toDataURL()+')';
-    // ctxgraph = c2.getContext('2d');
     gbuffer = ctx.getImageData(0, 0, canvasN, canvasN);
     gbufferdata = gbuffer.data;
 
@@ -693,46 +662,6 @@ var init = function() {
     Number.prototype.mod = function(n) {
         return ((this%n)+n)%n;
     }
-
-    // document.getElementById('label_temp_input').addEventListener("keydown", function(e) {
-    //     if (e.keyCode == 13){
-    //         e.preventDefault();
-    //         step = document.getElementById('temp').step;
-    //         min = document.getElementById('temp').min;
-    //         tval = parseFloat(document.getElementById('label_temp_input').value);
-    //
-    //         if (tval <= Math.pow(10, min))
-    //             logval = min - 2*step;
-    //         else
-    //             logval = log10(tval);
-    //
-    //         document.getElementById('temp').value = logval;
-    //         update_temp();
-    //         undotextbox('label_temp_input');
-    //     }
-    // }, false);
-    //
-    // document.getElementById('label_field_input').addEventListener("keydown", function(e) {
-    //     if (e.keyCode == 13){
-    //         e.preventDefault();
-    //         document.getElementById('field').value = document.getElementById('label_field_input').value;
-    //         update_field();
-    //         undotextbox('label_field_input');
-    //     }
-    // }, false);
-    //
-    // document.getElementById('label_frames_input').addEventListener("keydown", function(e) {
-    //     if (e.keyCode == 13){
-    //         e.preventDefault();
-    //         tval = parseFloat(document.getElementById('label_frames_input').value);
-    //         if (update_func=='metropolis')
-    //             document.getElementById('frames').value = log10(tval);
-    //         else
-    //             document.getElementById('frames').value = tval;
-    //         update_frames();
-    //         undotextbox('label_frames_input');
-    //     }
-    // }, false);
 
     clear();
     cleargraph();
