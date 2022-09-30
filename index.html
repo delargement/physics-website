@@ -14,13 +14,15 @@
                     sans: ['Segoe UI', 'sans-serif'],
                     serif: ['Merriweather', 'serif'],
                 },
-            }
+            },
         }
-    window.MathJax = {
-  loader: {load: ['[tex]/physics']},
-  tex: {packages: {'[+]': ['physics']}}
-};
+      window.MathJax = {
+	      loader: {load: ['[tex]/physics']},
+	      tex: {packages: {'[+]': ['physics']}}
+      };
     </script>
+
+    <link rel="stylesheet" href="main.css"/>
 
 
 <!--    Fonts -->
@@ -49,8 +51,8 @@
         <p class="my-8">
             Picture a billiard table, with two billiard balls, labeled A and B, set at the left two corners. If you simultaneously hit both balls at an angle towards the middle of the board, we would expect them to collide and rebound into the top two holes. A will go to the top right hole, while B will go to the bottom right. Nothing surprising here.
         </p>
-        <div class="left-[60rem] absolute w-1/4">
-            <img alt="billiard table" src="public/billiard%201.svg" class="object-cover ">
+        <div class="float-right clear-left relative mr-[-30rem] w-[25rem]">
+            <img alt="billiard table" src="public/billiard%201.svg" class="object-cover">
             <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
             <p class="text-sm ml-2">
                 Sample caption
@@ -76,7 +78,9 @@
             However, this is where quantum mechanics diverges from classical mechanics. Definite trajectories of the particle violate the intrinsic uncertainty to the state of a physical system.
         </p>
 
-        <div class="left-[60rem] absolute w-1/4">
+
+        <div class="float-right clear-left relative mr-[-30rem] w-[25rem]">
+
             <img alt="billiard table" src="public/billiard%202.svg" class="object-cover">
             <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
             <p class="text-sm ml-2">
@@ -96,11 +100,11 @@
             However, there is one way to know for sure, which is to reach into the billiard holes and check them for oneself. But up until then, we don’t know whether the system’s state is in (top = A, bottom = B) or (top = B, bottom = A). (for brevity, we’ll specify these states as \(\ket{AB}\) and \(\ket{BA}\) respectively, inspired by typical quantum physics notation). So how do we move forward?
         </p>
 
-        <aside class="left-[60rem] absolute border-l-4 bg-slate-100 p-5 font-sans">
+        <div class="float-right clear-left relative mr-[-20rem] border-l-4 w-[15rem] bg-slate-100 p-5 font-sans">
             <h5 class="font-bold text-2xl font-extrabold text-blue-800">Stop to think</h5>
             <p class="max-w-2xl"><b>Why square root?</b></p>
             <p>fjdkjf dklfj dskj </p>
-        </aside>
+        </div>
 
         <p class="my-8">
             The trick is to describe the system probabilistically, using the framework statevectors. Suppose a system can take on any number of states \(\ket{i}\), each with probability \(|a_i|^2\) for some (complex) number \(a_i\). Then the system’s state can be written as the statevector \(\ket{\psi} = a_1 \ket{1} + a_2 \ket{2} + \ldots \). This encodes all the information of the system.
@@ -114,11 +118,13 @@
             First note that the statevector should have some symmetry between \( \ket{AB} \) and \( \ket{BA} \). Intuitively, \( \ket{\psi} = \frac{1}{\sqrt{2}} \ket{AB} + \frac{1}{\sqrt{2}} \ket{BA} \) would seem to do the job. But, \(\ket{\psi} = \frac{1}{\sqrt{2}} \ket{AB} - \frac{1}{\sqrt{2}} \ket{BA} \) works just as well as we only care about square of the coefficients, i.e. \((-1)^2 = 1 \).
         </p>
 
-        <aside class="left-[60rem] absolute border-l-4 bg-slate-100 p-5 font-sans">
+
+
+        <div class="float-right clear-left relative mr-[-20rem] border-l-4 w-[15rem] bg-slate-100 p-5 font-sans">
             <h5 class="font-bold text-2xl font-extrabold text-blue-800">Stop to think</h5>
-            <p class="max-w-2xl"><b>When is a particle a boson or a fermion?</b></p>
+            <p class="max-w-2xl leading-tight"><b>When is a particle a boson or a fermion?</b></p>
             <p>fjdkjf dklfj dskj </p>
-        </aside>
+        </div>
 
         <p class="my-8">
             Particles which obey the former relation are called <b>bosons</b>, while particles which obey the latter are <b>fermions</b>. But as we’ll see this minute difference in sign makes all the difference!
@@ -161,6 +167,17 @@
             Fermions and Ferromagnets
         </h2>
 
+
+
+
+
+
+        <p class="my-8">
+            In electrodynamics, we can use the idea of fermions and the tendency to avoid each other. Recall the Pauli Exclusion Principle, which says that two fermions cannot be in the same state. But what defines an electron’s state?
+        </p>
+         <p class="my-8">
+             For electrons orbiting the nucleus, there are four numbers which ‘serialize’ an electron. We call them the <b>quantum numbers</b>.
+        </p>
         <div class="">
             <img alt="billiard table" src="public/qmseries.png" class="object-cover">
             <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
@@ -170,7 +187,34 @@
         </div>
 
 
-        <div class="ml-[45rem] absolute w-1/4">
+        <p class="my-8">
+              The <b>principal quantum number (n)</b> states which electron shell the electron is in. However, the idea of that electrons orbit in circular orbits like how a satellite orbits around the earth is little misleading. You could say we are <i>uncertain</i> of the path of the orbiting electron. What we can say is there is a certain region around the nucleus where you are very likely to find the electron, and these regions can take interesting shapes.
+        </p>
+
+        <div class="">
+            <img alt="billiard table" src="public/orbitals.png" class="object-cover">
+            <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
+            <p class="text-sm ml-2">
+                Quantum numbers of an electron orbiting a nucleus.
+            </p>
+        </div>
+
+        <p class="my-8">
+            These shapes is characterized by the <b>magnetic quantum number (m)</b> and the orientation of the shape in space is characterized by the <b>angular quantum number (l).</b>
+        </p>
+        <p class="my-8">
+            Finally, electrons possess an intrinsic ‘spin’ which can either be spin ‘up’ or ‘down’. A textbook description of spin is to liken the electron to a top which can be spinning either clockwise or anticlockwise about its own axis. This is unrelated to the electron’s rotation about the nucleus, as remember, spin is intrinsic to the electron, not its orbit.
+        </p>
+
+        <p class="my-8">
+            However, an interesting feature of electrons is that they possess a certain ‘magnetic moment’. What this means is that an electron has a magnetic dipole, producing a magnetic field like a tiny bar magnet. And as it turns out, the polarity of this bar magnet is related to the spin of the electron. It seems that we have found a link between electron spin and magnetism.
+        </p>
+        <h3 class="italic text-3xl font-sans my-5 text-slate-700">
+            Ferromagnetism
+        </h3>
+
+
+        <div class="float-right clear-left relative mr-[-30rem] w-[25rem]">
             <img alt="billiard table" src="public/magnetdipole.png" class="object-cover">
             <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
             <p class="text-sm ml-2">
@@ -178,26 +222,7 @@
             </p>
         </div>
 
-        <p class="my-8">
-            In electrodynamics, we can use the idea of fermions and the tendency to avoid each other. Recall the Pauli Exclusion Principle, which says that two fermions cannot be in the same state. But what defines an electron’s state?
-        </p>
-         <p class="my-8">
-             For electrons orbiting the nucleus, there are four numbers which ‘serialize’ an electron. We call them the <b>quantum numbers</b>.
-        </p>
 
-          <p class="my-8">
-              The <b>principal quantum number (n)</b> states which electron shell the electron is in. However, the idea of that electrons orbit in circular orbits like how a satellite orbits around the earth is little misleading. You could say we are <i>uncertain</i> of the path of the orbiting electron. What we can say is there is a certain region around the nucleus where you are very likely to find the electron, and these regions can take interesting shapes.
-        </p>
-
-        <p class="my-8">
-            The shape is characterized by the <b>magnetic quantum number (m)</b> and the orientation of the shape in space is characterized by the <b>angular quantum number (l).</b>
-        </p>
-        <p class="my-8">
-            Finally, electrons possess an intrinsic ‘spin’ which can either be spin ‘up’ or ‘down’. A textbook description of spin is to liken the electron to a top which can be spinning either clockwise or anticlockwise about its own axis. This is unrelated to the electron’s rotation about the nucleus, as remember, spin is intrinsic to the electron, not its orbit.
-        </p>
-        <p class="my-8">
-            However, an interesting feature of electrons is that they possess a certain ‘magnetic moment’. What this means is that an electron has a magnetic dipole, producing a magnetic field like a tiny bar magnet. And as it turns out, the polarity of this bar magnet is related to the spin of the electron. It seems that we have found a link between electron spin and magnetism.
-        </p>
         <p class="my-8">
             Ferromagnetism is what allows materials like iron, cobalt, and nickel to become permanent magnets. But how does it work?
         </p>
@@ -208,12 +233,13 @@
 
         </p>
         <p class="my-8">
-
             This only works when ‘most’ of the magnetic dipoles are pointing in a single direction. Otherwise, there would be no net magnetic field as we zoom out.
         </p>
+
         <p class="my-8">
-It would be quite hard to individually turn each magnetic dipole the right way around. However, we know from common experience that we can make a permanent magnet by just inducing an external magnetic field through it with an electromagnet.
+            It would be quite hard to individually turn each magnetic dipole the right way around. However, we know from common experience that we can make a permanent magnet by just inducing an external magnetic field through it with an electromagnet.
         </p>
+
         <p class="my-8">
 
             This is because the magnetic dipoles tend to want to point in the same direction, because this is what minimizes the potential energy of the system.
@@ -228,9 +254,10 @@ It would be quite hard to individually turn each magnetic dipole the right way a
 
          <p class="my-8">
 
-             Thus, the Coulomb interaction energy is minimized when the dipoles point in the same direction. However, this tendency for a pair of dipoles to align themselves is only relevant when they are very close together, as that’s when Pauli’s Exclusion Principle comes into play. In summary, by nudging some the magnetic dipoles in a ferromagnetic material to point towards a particular direction, i.e. with an electromagnet, the rest of the magnetic dipoles will follow suit and remain pointing in that direction. You have just created a permanent magnet.
+             Thus, the Coulomb interaction energy is minimized when the dipoles point in the same direction. However, this tendency for a pair of dipoles to align themselves is only relevant when they are very close together, as that is when Pauli’s Exclusion Principle comes into play. In summary, by nudging some the magnetic dipoles in a ferromagnetic material to point towards a particular direction, i.e. with an electromagnet, the rest of the magnetic dipoles will follow suit and remain pointing in that direction. You have just created a permanent magnet.
 
         </p>
+
 
         <p class="my-8">
 
@@ -258,7 +285,6 @@ It would be quite hard to individually turn each magnetic dipole the right way a
 
         </p>
 
-        <p class="my-8">
         <ol>
             <li>
                 <p>
@@ -267,22 +293,20 @@ It would be quite hard to individually turn each magnetic dipole the right way a
             </li>
             <li>
                 <p>
-            2.	Magnetic dipoles like to align themselves with the external field.
+                    2.	Magnetic dipoles like to align themselves with the external field.
                 </p>
             </li>
             <li>
                 <p>
-                3.	Magnetic dipoles like to align themselves with magnetic dipoles next to them.
+                    3.	Magnetic dipoles like to align themselves with magnetic dipoles next to them.
                 </p>
             </li>
             <li>
                 <p>
-4.	The greater the temperature, the greater of chance of the polarity randomly flipping.
+                    4.	The greater the temperature, the greater of chance of the polarity randomly flipping.
                 </p>
             </li>
         </ol>
-
-        </p>
 
         <p class="my-8">
             Using these rules, we can play a game. Arrange a bunch of magnetic dipoles in an N-by-N square grid, representing them as a pixel that is either black or white, corresponding to the polarity of their magnetic moment/spin. Each pixel has a random chance to switch polarity, and this random chance is calculated based on the external magnetic field, polarity of the four neighbouring magnetic dipoles in the four orthogonal directions, and the temperature.
@@ -334,7 +358,7 @@ It would be quite hard to individually turn each magnetic dipole the right way a
 
                 <div class="pt-5" >
                     <p class="px-5 italic text-sm ">
-                        Ising Simulation code made by <a href="https://github.com/mattbierbaum/ising.js/" class="text-blue-500 underline">Matt Bierbaum</a>
+                        Ising simulation code made by <a href="https://github.com/mattbierbaum/ising.js/" class="text-blue-500 underline">Matt Bierbaum</a>
                     </p>
                 </div>
             </div>
