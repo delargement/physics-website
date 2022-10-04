@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://cdn.tailwindcss.com"></script>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script type="text/javascript" id="MathJax-script" async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
     </script>
     <script>
-        tailwind.config = {
-            theme: {
-                fontFamily: {
-                    sans: ['Segoe UI', 'sans-serif'],
-                    serif: ['Merriweather', 'serif'],
-                },
-            },
-        }
-      window.MathJax = {
-	      loader: {load: ['[tex]/physics']},
-	      tex: {packages: {'[+]': ['physics']}}
-      };
+			tailwind.config = {
+				theme: {
+					fontFamily: {
+						sans: ['Segoe UI', 'sans-serif'],
+						serif: ['Merriweather', 'serif'],
+					},
+				},
+			}
+			window.MathJax = {
+				loader: {load: ['[tex]/physics']},
+				tex: {packages: {'[+]': ['physics']}}
+			};
     </script>
 
     <link rel="stylesheet" href="main.css"/>
 
 
-<!--    Fonts -->
+    <!--    Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
@@ -36,13 +36,13 @@
 <img alt="Quantum physics" src="placeholder.jpg">
 
 <main class="mx-auto max-w-6xl px-4  mt-20">
-<!--    <div class="my-5">-->
-<!--        <div class="text-center mx-auto">-->
-<!--            <h1 class="text-4xl tracking-tight font-bold font-serif text-6xl">-->
-<!--                <span class="block xl:inline">This is a site</span>-->
-<!--            </h1>-->
-<!--        </div>-->
-<!--    </div>-->
+    <!--    <div class="my-5">-->
+    <!--        <div class="text-center mx-auto">-->
+    <!--            <h1 class="text-4xl tracking-tight font-bold font-serif text-6xl">-->
+    <!--                <span class="block xl:inline">This is a site</span>-->
+    <!--            </h1>-->
+    <!--        </div>-->
+    <!--    </div>-->
     <div class="text-xl max-w-[40rem]  font-serif text-[1rem] leading-7">
         <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
             A simple analogy
@@ -130,7 +130,7 @@
             Particles which obey the former relation are called <b>bosons</b>, while particles which obey the latter are <b>fermions</b>. But as we’ll see this minute difference in sign makes all the difference!
         </p>
 
-      <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
+        <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
             Properties of Bosons and Fermions
         </h2>
 
@@ -139,18 +139,18 @@
         </p>
 
 
-<!--        <div class="ml-[45rem] absolute w-1/4">-->
-<!--            <img alt="billiard table" src="public/qmmagang.png" class="object-cover">-->
-<!--            <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">-->
-<!--            <p class="text-sm ml-2">-->
-<!--                Sample caption-->
-<!--            </p>-->
-<!--        </div>-->
+        <!--        <div class="ml-[45rem] absolute w-1/4">-->
+        <!--            <img alt="billiard table" src="public/qmmagang.png" class="object-cover">-->
+        <!--            <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">-->
+        <!--            <p class="text-sm ml-2">-->
+        <!--                Sample caption-->
+        <!--            </p>-->
+        <!--        </div>-->
 
 
         <p class="my-8">
             Using the equation for fermions  \( \ket{\psi} = \frac{1}{\sqrt{2}} \ket{AB} - \frac{1}{\sqrt{2}} \ket{BA} \) observe that if we let \(A=B\), we get  \( \ket{\psi} = \frac{1}{\sqrt{2}} \ket{AA} - \frac{1}{\sqrt{2}} \ket{AA} =0\). This is also known as the Pauli's exclusion principle which states that two identical fermions cannot occupy the same quantum state within a quantum system.
-            </p>
+        </p>
         <p class="my-8">
             On the other hand, for bosons we observe that \( \ket{\psi} = \frac{1}{\sqrt{2}} \ket{AA} + \frac{1}{\sqrt{2}} \ket{AA} \)  does not vanish, meaning there is no limit on the number of bosons that can be put in the same quantum state. In fact, bosons tend to clump together, as compared to distinguishable quantum particles as we'll soon see.
         </p>
@@ -159,9 +159,9 @@
             To get a feel for the statistics of the particles, we can use simple combinatorics.
         </p>
 
-       <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
+        <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
             Fermi Gases
-       </h2>
+        </h2>
 
         <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
             Fermions and Ferromagnets
@@ -171,7 +171,7 @@
         <p class="my-8">
             In electrodynamics, we can use the idea of fermions and the tendency to avoid each other. Recall the Pauli Exclusion Principle, which says that two fermions cannot be in the same state. But what defines an electron’s state?
         </p>
-         <p class="my-8">
+        <p class="my-8">
             For electrons orbiting the nucleus, there are four numbers that ‘serialize’ an electron. We call them the <b>Quantum numbers.</b>
         </p>
         <div class="">
@@ -184,7 +184,7 @@
 
 
         <p class="my-8">
-The <b>principal quantum number (n)</b> states which electron shell the electron is in. However, the idea that electrons orbit in circular orbits like how a satellite orbits around the earth is a little misleading. You could say we are <i>uncertain</i> of the path of the orbiting electron. We can say there is a certain region around the nucleus where you are very likely to find the electron, and these regions can take interesting shapes.
+            The <b>principal quantum number (n)</b> states which electron shell the electron is in. However, the idea that electrons orbit in circular orbits like how a satellite orbits around the earth is a little misleading. You could say we are <i>uncertain</i> of the path of the orbiting electron. We can say there is a certain region around the nucleus where you are very likely to find the electron, and these regions can take interesting shapes.
         </p>
 
         <div class="">
@@ -196,14 +196,14 @@ The <b>principal quantum number (n)</b> states which electron shell the electron
         </div>
 
         <p class="my-8">
-The shape is characterized by the <b>magnetic quantum number (m)</b> and the orientation of the shape in space is characterized by the <b>angular quantum number (l).</b>
+            The shape is characterized by the <b>magnetic quantum number (m)</b> and the orientation of the shape in space is characterized by the <b>angular quantum number (l).</b>
         </p>
         <p class="my-8">
-Finally, electrons possess an intrinsic <b>‘spin’ (s)</b> which can either be 'spin up’ or ‘spin down’. A textbook description of spin is to liken the electron to a top which can be spinning either clockwise or anticlockwise about its axis. This is unrelated to the electron’s rotation about the nucleus, as remember, spin is intrinsic to the electron, not its orbit.
+            Finally, electrons possess an intrinsic <b>‘spin’ (s)</b> which can either be 'spin up’ or ‘spin down’. A textbook description of spin is to liken the electron to a top which can be spinning either clockwise or anticlockwise about its axis. This is unrelated to the electron’s rotation about the nucleus, as remember, spin is intrinsic to the electron, not its orbit.
         </p>
 
         <p class="my-8">
-However, an interesting feature of electrons is that they possess a certain ‘magnetic moment’. What this means is that an electron has a magnetic dipole, producing a magnetic field like a tiny bar magnet. And as it turns out, the polarity of this bar magnet is related to the spin of the electron. It seems that we have found a link between electron spin and magnetism.
+            However, an interesting feature of electrons is that they possess a certain ‘magnetic moment’. What this means is that an electron has a magnetic dipole, producing a magnetic field like a tiny bar magnet. And as it turns out, the polarity of this bar magnet is related to the spin of the electron. It seems that we have found a link between electron spin and magnetism.
         </p>
         <h3 class="italic text-3xl font-sans my-5 text-slate-700">
             Ferromagnetism
@@ -220,46 +220,46 @@ However, an interesting feature of electrons is that they possess a certain ‘m
 
 
         <p class="my-8">
-Ferromagnetism is what allows materials like iron, cobalt, and nickel to become permanent magnets, even without the presence of an external magnetic field. But how does it work?
+            Ferromagnetism is what allows materials like iron, cobalt, and nickel to become permanent magnets, even without the presence of an external magnetic field. But how does it work?
         </p>
         <p class="my-8">
 
-Within a ferromagnetic metal, high school chemistry class would tell you that the structure consists of large metallic ions and a sea of delocalized electrons. But as we learned, these electrons also act as tiny magnetic dipoles. Each electron doesn’t have a particularly strong magnetic field but add up the field across the electron sea and you can obtain a strong ferromagnet.
+            Within a ferromagnetic metal, high school chemistry class would tell you that the structure consists of large metallic ions and a sea of delocalized electrons. But as we learned, these electrons also act as tiny magnetic dipoles. Each electron doesn’t have a particularly strong magnetic field but add up the field across the electron sea and you can obtain a strong ferromagnet.
 
         </p>
         <p class="my-8">
-This only works when most of the electron spins are in a single direction. Otherwise, there would be no <i>net</i> magnetic field as we zoom out.
+            This only works when most of the electron spins are in a single direction. Otherwise, there would be no <i>net</i> magnetic field as we zoom out.
         </p>
 
         <p class="my-8">
-It would be quite hard to individually make each electron spin the right way around. However, we know from common experience that we can make a permanent magnet by just inducing an external magnetic field through it with an electromagnet. This is because electrons close together will tend to align their spins. This phenomenon is known as <b>Hund’s first rule. </b>
-        </p>
-
-        <p class="my-8">
-
-This phenomenon is due to two complementing effects, which will work together to reduce the total potential energy of the system. Firstly, electrons will have strong Coulomb interactions with the positively charged nucleus they orbit. However, the positive charge of the nucleus is screened by the negative charge of neighbouring electrons, which reduces the attractive potential between the electron and the nucleus. However, the neighbouring electrons can be kept at a distance when their spins aligned, as the Pauli Exclusion principle forbids them from getting too close. This reduces the screening effect.
-
+            It would be quite hard to individually make each electron spin the right way around. However, we know from common experience that we can make a permanent magnet by just inducing an external magnetic field through it with an electromagnet. This is because electrons close together will tend to align their spins. This phenomenon is known as <b>Hund’s first rule. </b>
         </p>
 
         <p class="my-8">
 
-In summary, by nudging some of the magnetic dipoles in a ferromagnetic material to point towards a particular direction, i.e. with an electromagnet, the rest of the magnetic dipoles will follow suit and remain pointing in that direction. You have just created a permanent magnet.
+            This phenomenon is due to two complementing effects, which will work together to reduce the total potential energy of the system. Firstly, electrons will have strong Coulomb interactions with the positively charged nucleus they orbit. However, the positive charge of the nucleus is screened by the negative charge of neighbouring electrons, which reduces the attractive potential between the electron and the nucleus. However, the neighbouring electrons can be kept at a distance when their spins aligned, as the Pauli Exclusion principle forbids them from getting too close. This reduces the screening effect.
+
+        </p>
+
+        <p class="my-8">
+
+            In summary, by nudging some of the magnetic dipoles in a ferromagnetic material to point towards a particular direction, i.e. with an electromagnet, the rest of the magnetic dipoles will follow suit and remain pointing in that direction. You have just created a permanent magnet.
 
         </p>
 
 
         <p class="my-8">
-There is still one caveat. The magnetization process has some randomness, when temperature increases, the tendency for magnetic dipoles to randomly flip increases. This complicates things and makes it harder for the entire system to point in a particular direction.
+            There is still one caveat. The magnetization process has some randomness, when temperature increases, the tendency for magnetic dipoles to randomly flip increases. This complicates things and makes it harder for the entire system to point in a particular direction.
         </p>
 
 
         <p class="my-8">
-It’s like how you will never find liquids that don’t have ordered molecular structures like solids because it is hard to keep the individual molecules in place. We can expand on this analogy, and ask: Is there a critical temperature, at which we can no longer magnetize a ferromagnet, like how a melting point distinguishes a solid and a liquid? If so, what is it?
+            It’s like how you will never find liquids that don’t have ordered molecular structures like solids because it is hard to keep the individual molecules in place. We can expand on this analogy, and ask: Is there a critical temperature, at which we can no longer magnetize a ferromagnet, like how a melting point distinguishes a solid and a liquid? If so, what is it?
         </p>
 
 
         <p class="my-8">
-There is, it’s called the <b>Curie Temperature.</b> And there is a hands-on way of finding the curie temperature with a simple simulation.
+            There is, it’s called the <b>Curie Temperature.</b> And there is a hands-on way of finding the curie temperature with a simple simulation.
         </p>
 
         <p class="my-8">
@@ -268,7 +268,7 @@ There is, it’s called the <b>Curie Temperature.</b> And there is a hands-on wa
 
         </p>
 
-      <ol class="list-decimal list-outside pl-5">
+        <ol class="list-decimal list-outside pl-5">
             <li>
                 <p>
                     A ferromagnet contains electrons that behave like magnetic dipoles. Let’s pretend they form a neat square grid, and we will work in 2 dimensions.
@@ -276,7 +276,7 @@ There is, it’s called the <b>Curie Temperature.</b> And there is a hands-on wa
             </li>
             <li>
                 <p>
-                     Magnetic dipoles like to align themselves with the external field.
+                    Magnetic dipoles like to align themselves with the external field.
                 </p>
             </li>
             <li>
@@ -292,11 +292,11 @@ There is, it’s called the <b>Curie Temperature.</b> And there is a hands-on wa
         </ol>
 
         <p class="my-8">
-Using these rules, we can play a game. Arrange a bunch of magnetic dipoles in an N-by-N square grid, representing them as a pixel that is either black or white, corresponding to the polarity of their magnetic moment/spin. Each pixel has a random chance to switch polarity, and this random chance is calculated based on the external magnetic field, the polarity of the four neighbouring magnetic dipoles in the four orthogonal directions, and the temperature.
+            Using these rules, we can play a game. Arrange a bunch of magnetic dipoles in an N-by-N square grid, representing them as a pixel that is either black or white, corresponding to the polarity of their magnetic moment/spin. Each pixel has a random chance to switch polarity, and this random chance is calculated based on the external magnetic field, the polarity of the four neighbouring magnetic dipoles in the four orthogonal directions, and the temperature.
         </p>
 
         <p>
-This is called the <b>Ising model</b>, and we have included a widget for you to play around with it.
+            This is called the <b>Ising model</b>, and we have included a widget for you to play around with it.
         </p>
 
 
@@ -328,7 +328,7 @@ This is called the <b>Ising model</b>, and we have included a widget for you to 
                     </div>
                 </div>
                 <div class="mx-auto flex flex-row justify-center">
-                     <div class="px-5">
+                    <div class="px-5">
                         <div>
                             <label id='eb3_label' class='eb_label font' for="temp" title="Temperature">Temperature</label>
                         </div>
@@ -363,12 +363,12 @@ This is called the <b>Ising model</b>, and we have included a widget for you to 
 
         <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
             Bosons and Superconductivity
-       </h2>
+        </h2>
 
         <aside class="left-[60rem] absolute border-l-4 bg-slate-100 p-5 font-sans">
-        <h5 class="font-bold text-2xl font-extrabold text-blue-800">QUIZ</h5>
-       <p class="w-[25rem]"><b>Q: What is the simulation's Curie temperature?</b></p>
-        <ul class="p-5 space-y-3">
+            <h5 class="font-bold text-2xl font-extrabold text-blue-800">QUIZ</h5>
+            <p class="w-[25rem]"><b>Q: What is the simulation's Curie temperature?</b></p>
+            <ul class="p-5 space-y-3">
                 <li class="group ">
                     <button class="shadow-md p-2 rounded-lg w-full false-ans">
                         1.3
@@ -379,37 +379,37 @@ This is called the <b>Ising model</b>, and we have included a widget for you to 
                         1.8
                     </button>
                 </li>
-                    <li class="group">
+                <li class="group">
                     <button class="shadow-md p-2 rounded-lg w-full true-ans">
                         2.3
                     </button>
                 </li>
-                            <li class="group">
+                <li class="group">
                     <button class="shadow-md p-2 rounded-lg w-full false-ans">
                         2.8
                     </button>
                 </li>
-        </ul>
+            </ul>
         </aside>
 
         <p class="my-8">
-Metals, as we all know, conduct electricity. They make up the wires which supply power to our homes, schools, and companies. However, they also have some amount of resistance, which inhibits the flow of current. A simple model of electrical conduction says that current is caused by the movement of electrons through a circuit and that the motion of the electrons is inhibited by random collisions between the electrons and the metal ions.
+            Metals, as we all know, conduct electricity. They make up the wires which supply power to our homes, schools, and companies. However, they also have some amount of resistance, which inhibits the flow of current. A simple model of electrical conduction says that current is caused by the movement of electrons through a circuit and that the motion of the electrons is inhibited by random collisions between the electrons and the metal ions.
         </p>
 
         <p class="my-8">
-However, what happens when a metal has zero resistance? Then it becomes what we call a <b>superconductor</b>, and this is exactly what happens when a metal is cooled to low enough temperatures. As the name suggests, these solids have several anomalous properties.
+            However, what happens when a metal has zero resistance? Then it becomes what we call a <b>superconductor</b>, and this is exactly what happens when a metal is cooled to low enough temperatures. As the name suggests, these solids have several anomalous properties.
         </p>
 
         <p class="my-8">
-One such property is that superconductors abhor changes in magnetic flux. This means that if a magnet is placed under a superconductor, none of the magnetic field lines will pass through the superconducting solid. If this sounds like Faraday’s law in electrodynamics, that is, a changing magnetic field through a loop will induce a current, then it should. Due to the metal’s zero resistance, even a small change in flux will induce a massive current such as to negate the change in flux.
+            One such property is that superconductors abhor changes in magnetic flux. This means that if a magnet is placed under a superconductor, none of the magnetic field lines will pass through the superconducting solid. If this sounds like Faraday’s law in electrodynamics, that is, a changing magnetic field through a loop will induce a current, then it should. Due to the metal’s zero resistance, even a small change in flux will induce a massive current such as to negate the change in flux.
         </p>
 
         <p class="my-8">
             This doesn’t necessarily mean magnetic field lines can never pass through a superconductor since we only care about changes in magnetic flux. When a metal solid is placed over a magnet, then cooled to a superconducting state, then the metal will resist any change to the magnetic field flux, even if it means defying gravity and hovering in the position it was before it became a superconductor. This is called the <b>Meissner effect</b>, named after its founder, Walther Meissner.
         </p>
 
-      <object data="https://www.youtube.com/embed/Ws6AAhTw7RA" class="w-[100%]"
-        height="315"></object>
+        <object data="https://www.youtube.com/embed/Ws6AAhTw7RA" class="w-[100%]"
+                height="315"></object>
 
         <p class="my-8">
             We can make some sense of the strange properties using the theory of bosons. This may seem strange since the charge carriers producing the current, are electrons, which are fermions. However, something neat occurs at low temperatures.
@@ -418,22 +418,22 @@ One such property is that superconductors abhor changes in magnetic flux. This m
         <p class="my-8">
             Experimentally, physicists found that superconductivity sets in abruptly at a certain critical temperature, specific to the metal. In particular, the critical temperature increased with decreasing mass of the metal isotope. This was considered strange, why was an electric property, the critical temperature at which the resistance of the metal vanishes, dependent on a mechanical property of the metal, its isotopic mass? It was as if there was some interaction occurring between the charge-carrying electrons and positive metal ions responsible for inducing superconductivity, which becomes more significant as the metal ions become less massive.
         </p>
-<p class="my-8">
-    Three physicists, John Bardeen, Leon Cooper, and John Robert Schrieffer took note of this discovery, known as the <b>Isotope effect,</b> and were led to develop their Nobel prize-winning BCS theory of superconductivity. They hypothesized that the positive metal ions form a lattice structure, which oscillate in response to passing negatively charged electrons, due to the usual Coulomb attraction. The movement of positive ions towards the electron screens its negative charge, resulting in a net attraction of other electrons towards the screened electron. However, this attractive force is very small, on the order of a few milli-electron volts, so this only becomes important only at low temperatures. In addition, at low temperatures very few electrons are freely moving as the rest occupy the ground state, (This is a property of fermions discussed in the video), so usually each electron is only bound to one other electron, which we call a <b>Cooper pair.</b>
+        <p class="my-8">
+            Three physicists, John Bardeen, Leon Cooper, and John Robert Schrieffer took note of this discovery, known as the <b>Isotope effect,</b> and were led to develop their Nobel prize-winning BCS theory of superconductivity. They hypothesized that the positive metal ions form a lattice structure, which oscillate in response to passing negatively charged electrons, due to the usual Coulomb attraction. The movement of positive ions towards the electron screens its negative charge, resulting in a net attraction of other electrons towards the screened electron. However, this attractive force is very small, on the order of a few milli-electron volts, so this only becomes important only at low temperatures. In addition, at low temperatures very few electrons are freely moving as the rest occupy the ground state, (This is a property of fermions discussed in the video), so usually each electron is only bound to one other electron, which we call a <b>Cooper pair.</b>
         </p>
-<p class="my-8">
+        <p class="my-8">
 
-    Cooper pairs are special because they can be treated as bosons, although they are made of two fermions. This is because each electron has a half-integer spin number, so the sum of the spins of a pair of electrons will always result in an integer spin number, which is characteristic of a boson. While whether Cooper pairs can be considered bosons is a controversial issue, the point is that Cooper pairs can undergo a similar condensation process as Bose-Einstein Condensates (BECs) (See the video for more on BECs). That is, past a certain critical temperature, most of the cooper pairs will all occupy low-level energy states below a certain threshold known as the <b>Fermi Energy.</b>
-</p>
+            Cooper pairs are special because they can be treated as bosons, although they are made of two fermions. This is because each electron has a half-integer spin number, so the sum of the spins of a pair of electrons will always result in an integer spin number, which is characteristic of a boson. While whether Cooper pairs can be considered bosons is a controversial issue, the point is that Cooper pairs can undergo a similar condensation process as Bose-Einstein Condensates (BECs) (See the video for more on BECs). That is, past a certain critical temperature, most of the cooper pairs will all occupy low-level energy states below a certain threshold known as the <b>Fermi Energy.</b>
+        </p>
 
 
-<p class="my-8">
-This is where we can tell the entire story of superconductivity. In classical metals, resistance is caused by the energy lost through the random collisions of charge carriers. However, as the metal reaches its critical temperature, the charge carriers will suddenly start forming cooper pairs occupying very low energy levels, below the Fermi Energy. This is akin to Bose-Einstein Condensation. These Cooper pairs have associated attractive binding energies which reduces the energy of the constituent electrons, so when Cooper pairs form, they leave behind an ‘energy gap’ around the Fermi energy threshold. Now the charge carriers find it harder to jump off to higher energy levels during collisions, drastically reducing energy losses from the collisions, which results in zero resistance.  And that’s how superconductors work.
+        <p class="my-8">
+            This is where we can tell the entire story of superconductivity. In classical metals, resistance is caused by the energy lost through the random collisions of charge carriers. However, as the metal reaches its critical temperature, the charge carriers will suddenly start forming cooper pairs occupying very low energy levels, below the Fermi Energy. This is akin to Bose-Einstein Condensation. These Cooper pairs have associated attractive binding energies which reduces the energy of the constituent electrons, so when Cooper pairs form, they leave behind an ‘energy gap’ around the Fermi energy threshold. Now the charge carriers find it harder to jump off to higher energy levels during collisions, drastically reducing energy losses from the collisions, which results in zero resistance.  And that’s how superconductors work.
         </p>
 
         <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
             Epilogue
-       </h2>
+        </h2>
 
         <p class="my-8">
             Together we have discussed the formation of neutron stars and Bose Einstein condensates, and provided qualitative explanations for ferromagnets and superconductors. This should go to show how the theory of fermion and bosons is essential to explaining a wide-range of physical phenomena, despite the theory only having been developed in the last century, with many of its implications such as superconductivity still being the subject of active research. But we should step back and admire how much of the complexity of the statistical behavior of bosons and fermions arose from a simple argument regarding their indistinguishability.
@@ -453,32 +453,32 @@ This is where we can tell the entire story of superconductivity. In classical me
 
         <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
             Writing Credits
-       </h2>
+        </h2>
 
         <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
             References
-       </h2>
+        </h2>
 
 
     </div>
 
     <script>
 
-        const trueans = document.querySelector('.true-ans');
-        const falseans = document.querySelector('.false-ans');
+			const trueans = document.querySelector('.true-ans');
+			const falseans = document.querySelector('.false-ans');
 
-        trueans.addEventListener('click', () => {
-            trueans.classList.add('bg-green-500');
-	        trueans.classList.add('text-white');
-        });
+			trueans.addEventListener('click', () => {
+				trueans.classList.add('bg-green-500');
+				trueans.classList.add('text-white');
+			});
 
-        falseans.addEventListener('click', () => {
-            console.log('yeah')
-            falseans.classList.add('bg-red-500');
-            falseans.classList.add('text-white');
-            trueans.classList.add('bg-green-500');
-	        trueans.classList.add('text-white');
-        });
+			falseans.addEventListener('click', () => {
+				console.log('yeah')
+				falseans.classList.add('bg-red-500');
+				falseans.classList.add('text-white');
+				trueans.classList.add('bg-green-500');
+				trueans.classList.add('text-white');
+			});
 
     </script>
 </main>
