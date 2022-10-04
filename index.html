@@ -115,7 +115,7 @@
         </p>
 
         <p class="my-8">
-            First note that the statevector should have some symmetry between \( \ket{AB} \) and \( \ket{BA} \). This can mean that \( \ket{AB} = \ket{BA} \), and thus \( \psi = \frac{1}{\sqrt{2}} \ket{AB} + \frac{1}{\sqrt{2}} \ket{BA} \). However, remember that it is only the square of the coefficient that matters,
+            First note that the statevector should have some symmetry between \( \ket{AB} \) and \( \ket{BA} \). This can mean that \( \ket{AB} = \ket{BA} \), and thus \( \ket{\psi} = \frac{1}{\sqrt{2}} \ket{AB} + \frac{1}{\sqrt{2}} \ket{BA} \). However, remember that it is only the square of the coefficient that matters,
         </p>
 
 
@@ -159,9 +159,6 @@
             To get a feel for the statistics of the particles, we can use simple combinatorics.
         </p>
 
-        <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
-            Fermi Gases
-        </h2>
 
         <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
             Fermions and Ferromagnets
@@ -187,17 +184,19 @@
             The <b>principal quantum number (n)</b> states which electron shell the electron is in. However, the idea that electrons orbit in circular orbits like how a satellite orbits around the earth is a little misleading. You could say we are <i>uncertain</i> of the path of the orbiting electron. We can say there is a certain region around the nucleus where you are very likely to find the electron, and these regions can take interesting shapes.
         </p>
 
+        <p class="my-8">
+            This shape is characterized by the <b>magnetic quantum number (m)</b> and the orientation of the shape in space is characterized by the <b>angular quantum number (l).</b>
+        </p>
+
         <div class="">
             <img alt="billiard table" src="public/orbitals.png" class="object-cover">
             <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
             <p class="text-sm ml-2">
-                Quantum numbers of an electron orbiting a nucleus.
+                Electron orbitals of varying principal, magnetic and angular quantum numbers.
             </p>
         </div>
 
-        <p class="my-8">
-            The shape is characterized by the <b>magnetic quantum number (m)</b> and the orientation of the shape in space is characterized by the <b>angular quantum number (l).</b>
-        </p>
+
         <p class="my-8">
             Finally, electrons possess an intrinsic <b>‘spin’ (s)</b> which can either be 'spin up’ or ‘spin down’. A textbook description of spin is to liken the electron to a top which can be spinning either clockwise or anticlockwise about its axis. This is unrelated to the electron’s rotation about the nucleus, as remember, spin is intrinsic to the electron, not its orbit.
         </p>
@@ -205,7 +204,7 @@
         <p class="my-8">
             However, an interesting feature of electrons is that they possess a certain ‘magnetic moment’. What this means is that an electron has a magnetic dipole, producing a magnetic field like a tiny bar magnet. And as it turns out, the polarity of this bar magnet is related to the spin of the electron. It seems that we have found a link between electron spin and magnetism.
         </p>
-        <h3 class="italic text-3xl font-sans my-5 text-slate-700">
+        <h3 class="font-light italic text-5xl font-sans my-6 text-slate-700">
             Ferromagnetism
         </h3>
 
@@ -214,7 +213,7 @@
             <img alt="billiard table" src="public/magnetdipole.png" class="object-cover">
             <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
             <p class="text-sm ml-2">
-                Sample caption
+                Electron orbitals act like tiny magnetic dipoles, where its polarity is determined by its spin.
             </p>
         </div>
 
@@ -256,6 +255,16 @@
         <p class="my-8">
             It’s like how you will never find liquids that don’t have ordered molecular structures like solids because it is hard to keep the individual molecules in place. We can expand on this analogy, and ask: Is there a critical temperature, at which we can no longer magnetize a ferromagnet, like how a melting point distinguishes a solid and a liquid? If so, what is it?
         </p>
+
+
+        <div class="float-right clear-left relative mr-[-30rem] w-[25rem]">
+            <img alt="billiard table" src="public/waterphase.png" class="object-cover">
+            <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
+            <p class="text-sm ml-2">
+                Phase diagram of water. Abrupt changes in the structural properties of water occur at the phase boundaries. The ising model is a way to study phase transition in other statistical mechanical systems.
+            </p>
+        </div>
+
 
 
         <p class="my-8">
@@ -348,24 +357,7 @@
         </div>
         <script src="ising.js"></script>
 
-        <p class="my-8">
-            Notice that ‘islands’ (magnetic domains) of a particular polarity form, and these islands seem to consume, or be consumed by the other opposite polarity.
-        </p>
-
-        <p class="my-8">
-            Notice that ‘islands’ (magnetic domains) of a particular polarity form, and these islands seem to consume, or be consumed by the other opposite polarity.
-        </p>
-
-        <p class="my-8">
-            We are also able to see that the randomness induced by increasing temperature tends to break up large magnetic domains by randomly flipping the polarities of pixels. In fact, we can see that no matter how much a particular polarity has dominated the canvas, by increasing the temperature, we can break up the magnetization domains, preventing the system from achieving a net magnetization (when there is zero external field strength). Thus, to find the Curie temperature, we just must find the minimum temperature at which this phenomenon occurs. Try figuring it out the Curie temperature for this simulation!
-        </p>
-
-
-        <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
-            Bosons and Superconductivity
-        </h2>
-
-        <aside class="left-[60rem] absolute border-l-4 bg-slate-100 p-5 font-sans">
+        <div class="float-right clear-left relative mr-[-20rem] border-l-4 w-[15rem] bg-slate-100 p-5 font-sans">
             <h5 class="font-bold text-2xl font-extrabold text-blue-800">QUIZ</h5>
             <p class="w-[25rem]"><b>Q: What is the simulation's Curie temperature?</b></p>
             <ul class="p-5 space-y-3">
@@ -390,7 +382,20 @@
                     </button>
                 </li>
             </ul>
-        </aside>
+        </div>
+
+        <p class="my-8">
+            Notice that ‘islands’ (magnetic domains) of a particular polarity form, and these islands seem to consume, or be consumed by the opposite polarity.
+        </p>
+
+        <p class="my-8">
+            We are also able to see that the randomness induced by increasing temperature tends to break up large magnetic domains by randomly flipping the polarities of pixels. In fact, we can see that no matter how much a particular polarity has dominated the canvas, by increasing the temperature, we can break up the magnetization domains, preventing the system from achieving a net magnetization (when there is zero external field strength). Thus, to find the Curie temperature, we just must find the minimum temperature at which this phenomenon occurs. Try figuring it out the Curie temperature for this simulation!
+        </p>
+
+
+        <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
+            Bosons and Superconductivity
+        </h2>
 
         <p class="my-8">
             Metals, as we all know, conduct electricity. They make up the wires which supply power to our homes, schools, and companies. However, they also have some amount of resistance, which inhibits the flow of current. A simple model of electrical conduction says that current is caused by the movement of electrons through a circuit and that the motion of the electrons is inhibited by random collisions between the electrons and the metal ions.
@@ -399,6 +404,14 @@
         <p class="my-8">
             However, what happens when a metal has zero resistance? Then it becomes what we call a <b>superconductor</b>, and this is exactly what happens when a metal is cooled to low enough temperatures. As the name suggests, these solids have several anomalous properties.
         </p>
+
+        <div class="float-right clear-left relative mr-[-30rem] w-[25rem]">
+            <img alt="billiard table" src="public/meissner1.png" class="object-cover w-[100%]">
+            <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
+            <p class="text-sm ml-2">
+                The Meissner Effect prevents any change in magnetic flux through the superconductor.
+            </p>
+        </div>
 
         <p class="my-8">
             One such property is that superconductors abhor changes in magnetic flux. This means that if a magnet is placed under a superconductor, none of the magnetic field lines will pass through the superconducting solid. If this sounds like Faraday’s law in electrodynamics, that is, a changing magnetic field through a loop will induce a current, then it should. Due to the metal’s zero resistance, even a small change in flux will induce a massive current such as to negate the change in flux.
@@ -415,14 +428,27 @@
             We can make some sense of the strange properties using the theory of bosons. This may seem strange since the charge carriers producing the current, are electrons, which are fermions. However, something neat occurs at low temperatures.
         </p>
 
-        <p class="my-8">
-            Experimentally, physicists found that superconductivity sets in abruptly at a certain critical temperature, specific to the metal. In particular, the critical temperature increased with decreasing mass of the metal isotope. This was considered strange, why was an electric property, the critical temperature at which the resistance of the metal vanishes, dependent on a mechanical property of the metal, its isotopic mass? It was as if there was some interaction occurring between the charge-carrying electrons and positive metal ions responsible for inducing superconductivity, which becomes more significant as the metal ions become less massive.
-        </p>
-        <p class="my-8">
-            Three physicists, John Bardeen, Leon Cooper, and John Robert Schrieffer took note of this discovery, known as the <b>Isotope effect,</b> and were led to develop their Nobel prize-winning BCS theory of superconductivity. They hypothesized that the positive metal ions form a lattice structure, which oscillate in response to passing negatively charged electrons, due to the usual Coulomb attraction. The movement of positive ions towards the electron screens its negative charge, resulting in a net attraction of other electrons towards the screened electron. However, this attractive force is very small, on the order of a few milli-electron volts, so this only becomes important only at low temperatures. In addition, at low temperatures very few electrons are freely moving as the rest occupy the ground state, (This is a property of fermions discussed in the video), so usually each electron is only bound to one other electron, which we call a <b>Cooper pair.</b>
-        </p>
-        <p class="my-8">
+        <div class="float-right clear-left relative mr-[-30rem] w-[25rem]">
+            <img alt="Isotope Effect" src="public/isotope.png" class="object-cover w-[100%]">
+            <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
+            <p class="text-sm ml-2">
+                The Isotope Effect, pointing out the negative correlation between the superconducting transition temperature and the mass of the superconducting metal isotope paved the way for the BCS theory of superconductivity.
+                Image credit: <a href="http://hyperphysics.phy-astr.gsu.edu/hbase/Solids/coop.html" class="text-blue-500 underline">Hyperphysics</a>
 
+            </p>
+        </div>
+
+        <p class="my-8">
+            Experimentally, physicists found that superconductivity sets in abruptly at a certain critical temperature, specific to the metal. In particular, the critical temperature increased with decreasing mass of the metal isotope. This was considered strange, why was an electric property, the critical temperature at which the resistance of the metal vanishes, dependent on a mechanical property of the metal, its isotopic mass? It was as if there was some interaction occurring between the charge-carrying electrons and positive metal ions responsible for inducing superconductivity, which becomes more significant, the less massive the metal isotopes.
+        </p>
+        <p class="my-8">
+            Three physicists, John Bardeen, Leon Cooper, and John Robert Schrieffer took note of this discovery, known as the <b>Isotope effect,</b> and were led to develop their Nobel prize-winning BCS theory of superconductivity. They hypothesized that the positive metal ions form a lattice structure, which oscillate in response to passing negatively charged electrons, due to the usual Coulomb attraction. The movement of positive ions towards the electron screens its negative charge, resulting in a net attraction of other electrons towards the screened electron.
+        </p>
+
+        <p class="my-8">
+             However, this attractive force is very small, on the order of a few milli-electron volts, so this only becomes important only at low temperatures. In addition, at low temperatures very few electrons are freely moving as the rest occupy the ground state, (This is a property of fermions discussed in the video), so usually each electron is only bound to one other electron, which we call a <b>Cooper pair.</b>
+        </p>
+        <p class="my-8">
             Cooper pairs are special because they can be treated as bosons, although they are made of two fermions. This is because each electron has a half-integer spin number, so the sum of the spins of a pair of electrons will always result in an integer spin number, which is characteristic of a boson. While whether Cooper pairs can be considered bosons is a controversial issue, the point is that Cooper pairs can undergo a similar condensation process as Bose-Einstein Condensates (BECs) (See the video for more on BECs). That is, past a certain critical temperature, most of the cooper pairs will all occupy low-level energy states below a certain threshold known as the <b>Fermi Energy.</b>
         </p>
 
