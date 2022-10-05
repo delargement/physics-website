@@ -100,55 +100,72 @@
             However, there is one way to know for sure, which is to reach into the billiard holes and check them for oneself. But up until then, we don’t know whether the system’s state is in (top = A, bottom = B) or (top = B, bottom = A). (for brevity, we’ll specify these states as \(\ket{AB}\) and \(\ket{BA}\) respectively, inspired by typical quantum physics notation). So how do we move forward?
         </p>
 
-        <div class="float-right clear-left relative mr-[-30rem] border-l-4 w-[25rem] bg-slate-100 p-5 font-sans leading-tight">
+        <div class="float-right clear-left relative mr-[-35rem] border-l-4 w-[30rem] bg-slate-100 p-5 font-sans leading-tight">
             <h5 class="font-bold text-2xl font-extrabold text-blue-800">Stop to think</h5>
-            <p class="max-w-2xl"><b>Why complex?</b></p>
+            <p class="max-w-2xl my-2"><b>Why complex?</b></p>
             <p>
-                It may seem strange how we choose to associate a state with a complex number, which we have to square to get the state's probability. Why not just associate the state with the real probability directly? Well, it will turn out that when the mathematical formalism of quantum mechanics was conceived, the complex plane was found to have a number of convenient algebraic properties. For one thing, the complex plane is algebraically closed, unlike the real numbers, meaning all polynomials in one variable with complex coefficients can be reduced to linear factors, whereas you can't do that with \( x^2 + x + 1 \) using the real numbers. This suggests that there are 'holes' in the real number line, and this can cause trouble. For instance, when solving for the eigenvalues in an eigensystem by finding the roots of a characteristic equation. See this <a href="https://youtu.be/kdg4mDT6ayA">video</a> for more on why a quantum theory with just real numbers will never be complete.
+                It may seem strange how we choose to associate a state with a complex number, which we have to square to get the state's probability. Why not just associate the state with the real probability directly? Well, it will turn out that when the mathematical formalism of quantum mechanics was conceived, the complex plane was found to have a number of convenient algebraic properties. For one thing, the complex plane is algebraically closed, unlike the real numbers, meaning all polynomials in one variable with complex coefficients can be reduced to linear factors, whereas you can't do that with \( x^2 + x + 1 \) using the real numbers. This suggests that there are 'holes' in the real number line, and this can cause trouble. For instance, when solving for the eigenvalues in an eigensystem by finding the roots of a characteristic equation. See <a href="https://youtu.be/kdg4mDT6ayA" class="text-blue-500 underline" target="_blank">this video</a> for more on why a quantum theory based on just real numbers will never be complete.
             </p>
         </div>
+
 
         <p class="my-8">
             The trick is to describe the system probabilistically, using the framework of statevectors. Suppose a system can take on any number of states \(\ket{i}\), each with probability \(|a_i|^2\) for some (complex) number \(a_i\). Then the system’s state can be written as the statevector \(\ket{\psi} = a_1 \ket{1} + a_2 \ket{2} + \ldots \). This encodes all the information of the system.
         </p>
+
 
         <p class="my-8">
             Back to the original problem, assuming that \(\ket{AB}\) and \(\ket{BA}\) are equally probable, there are two ways we can denote the system’s statevector.
         </p>
 
         <p class="my-8">
-            First note that the statevector should have some symmetry between \( \ket{AB} \) and \( \ket{BA} \). This can mean that \( \ket{AB} = \ket{BA} \), and thus \( \ket{\psi} = \frac{1}{\sqrt{2}} \ket{AB} + \frac{1}{\sqrt{2}} \ket{BA} \). However, remember that it is only the square of the coefficient that matters,
+            First note that the statevector should have some symmetry between \( \ket{AB} \) and \( \ket{BA} \). Intuitively, \( \ket{\psi} = \frac{1}{\sqrt{2}} \ket{AB} + \frac{1}{\sqrt{2}} \ket{BA} \) would seem to do the job. But, due to reasons out of our scope, \( \ket{\psi} = \frac{1}{\sqrt{2}} \ket{AB} - \frac{1}{\sqrt{2}} \ket{BA} \) also turns out to be a fit description.
         </p>
 
-
-
         <p class="my-8">
-            Particles which obey the former relation are called <b>bosons</b>, while particles which obey the latter are <b>fermions</b>. But as we’ll see this minute difference in sign makes all the difference!
+            Particles which obey the former relation are called <b>bosons</b>, while particles which obey the latter are <b>fermions</b>. As we will see, this minute difference in sign makes all the difference!
         </p>
 
         <div class="float-right clear-left relative mr-[-30rem] border-l-4 w-[25rem] bg-slate-100 p-5 font-sans leading-tight">
             <h5 class="font-bold text-2xl font-extrabold text-blue-800">Stop to think</h5>
-            <p class="max-w-2xl leading-tight"><b>When is a particle a boson or a fermion?</b></p>
+            <p class="max-w-2xl my-2"><b>When is a particle a boson or a fermion?</b></p>
             <p> Quantum particles have this property called 'spin', characterized by an integer or half-integer, which is a measure of its intrinsic angular momentum. Bosons are particles with integer spin, and fermions are those with half-integer spin. This neat relation between indistinguishability and spin is unfortunately a result which requires knowledge of quantum electrodynamics.</p>
         </div>
 
+        <div class=" relative border-l-4 w-[35rem] mx-auto bg-slate-100 p-5 font-sans mx-5">
+            <h5 class="font-bold text-2xl font-extrabold text-blue-800">QUIZ</h5>
+            <p class="max-w-4xl"><b>Q1) A particle has statevector \( \ket{\psi} = \frac{i}{\sqrt{2}} \ket{x} - \frac{1}{\sqrt{2}} \ket{y} \). What is the probability of finding it in state \( \ket{x} \) upon measurement?</b></p>
+            <ul class="p-5 space-y-3 font-bold">
+                <li class="group ">
+                    <button class="shadow-md p-2 rounded-lg w-full " id="q1-true">
+                        1/2
+                    </button>
+                </li>
+                <li class="group">
+                    <button class="shadow-md p-2 rounded-lg w-full q1-false">
+                        -1
+                    </button>
+                </li>
+                <li class="group">
+                    <button class="shadow-md p-2 rounded-lg w-full q1-false">
+                        1/4
+                    </button>
+                </li>
+                <li class="group">
+                    <button class="shadow-md p-2 rounded-lg w-full q1-false">
+                        1
+                    </button>
+                </li>
+            </ul>
+        </div>
 
-        <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
+        <h3 class="font-bold  text-3xl font-sans my-6 text-slate-700">
             Properties of Bosons and Fermions
-        </h2>
+        </h3>
 
         <p class="my-8">
             We will now see how the sign of the statevector affects the properties of the system.
         </p>
-
-
-        <!--        <div class="ml-[45rem] absolute w-1/4">-->
-        <!--            <img alt="billiard table" src="public/qmmagang.png" class="object-cover">-->
-        <!--            <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">-->
-        <!--            <p class="text-sm ml-2">-->
-        <!--                Sample caption-->
-        <!--            </p>-->
-        <!--        </div>-->
 
 
         <p class="my-8">
@@ -158,10 +175,42 @@
             On the other hand, for bosons we observe that \( \ket{\psi} = \frac{1}{\sqrt{2}} \ket{AA} + \frac{1}{\sqrt{2}} \ket{AA} \)  does not vanish, meaning there is no limit on the number of bosons that can be put in the same quantum state. In fact, bosons tend to clump together, as compared to distinguishable quantum particles as we'll soon see.
         </p>
 
+        <div class=" relative border-l-4 w-[35rem] mx-auto bg-slate-100 p-5 font-sans mx-5">
+            <h5 class="font-bold text-2xl font-extrabold text-blue-800">QUIZ</h5>
+            <p class="max-w-4xl"><b>Q2) Suppose we have three fermions \( x\), \( y\), \( z \) which may be found in locations \( A \) , \( B \) or \( C \). How many ways can we distribute them between the three locations?</b></p>
+            <ul class="p-5 space-y-3 font-bold">
+                <li class="group ">
+                    <button class="shadow-md p-2 rounded-lg w-full q2-false" >
+                        1
+                    </button>
+                </li>
+                <li class="group">
+                    <button class="shadow-md p-2 rounded-lg w-full q2-false">
+                        2
+                    </button>
+                </li>
+                <li class="group">
+                    <button class="shadow-md p-2 rounded-lg w-full q2-false">
+                        3
+                    </button>
+                </li>
+                <li class="group">
+                    <button class="shadow-md p-2 rounded-lg w-full " id="q2-true">
+                        6
+                    </button>
+                </li>
+            </ul>
+        </div>
+
         <p class="my-8">
-            To get a feel for the statistics of the particles, we can use simple combinatorics.
+            To get a feel for the statistics of the particles, we can use simple combinatorics arguments to investigate their physical properties.
         </p>
 
+        <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
+            Combinatorics of Bosons and Fermions
+        </h2>
+
+        Insert video
 
         <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
             Fermions and Ferromagnets
@@ -192,7 +241,7 @@
         </p>
 
         <div class="">
-            <img alt="orbitals" src="public/orbitals.png" class="object-cover">
+            <img alt="orbitals" src="public/orbitals.jpg" class="object-cover">
             <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
             <p class="text-sm ml-2">
                 Electron orbitals of varying principal, magnetic and angular quantum numbers.
@@ -207,7 +256,28 @@
         <p class="my-8">
             However, an interesting feature of electrons is that they possess a certain ‘magnetic moment’. What this means is that an electron has a magnetic dipole, producing a magnetic field like a tiny bar magnet. And as it turns out, the polarity of this bar magnet is related to the spin of the electron. It seems that we have found a link between electron spin and magnetism.
         </p>
-        <h3 class="font-light italic text-5xl font-sans my-6 text-slate-700">
+        <div class=" relative border-l-4 w-[35rem] mx-auto bg-slate-100 p-5 font-sans mx-5">
+            <h5 class="font-bold text-2xl font-extrabold text-blue-800">QUIZ</h5>
+            <p class="max-w-4xl font-bold">Q5) In classical electrodynamics, we know that a circling electron produces a magnetic field by Ampere's law. Is the magnetic field of an electron in anticlockwise circular motion in the same or opposite direction to a spin-up electron?  </p>
+            <ul class="p-5 space-y-3 font-bold">
+                <li class="group">
+                    <button class="shadow-md p-2 rounded-lg w-full q6-false">
+                        True
+                    </button>
+                </li>
+                <li class="group ">
+                    <button class="shadow-md p-2 rounded-lg w-full " id="q6-true">
+                        False
+                    </button>
+                </li>
+
+            </ul>
+            <p class="max-w-4xl">
+                A more sophisticated <a href="https://arxiv.org/pdf/1903.07031.pdf" target="_blank" class="text-blue-500 underline">model of magnetism</a> using classical electrodynamics and statistical mechanics was explored by Paul Langevin in the early 20th century and was partly successful, having been able to predict Curie's law.
+            </p>
+        </div>
+
+        <h3 class="font-bold  text-3xl font-sans my-6 text-slate-700">
             Ferromagnetism
         </h3>
 
@@ -234,15 +304,22 @@
             This only works when most of the electron spins are in a single direction. Otherwise, there would be no <i>net</i> magnetic field as we zoom out.
         </p>
 
+
         <p class="my-8">
             It would be quite hard to individually make each electron spin the right way around. However, we know from common experience that we can make a permanent magnet by just inducing an external magnetic field through it with an electromagnet. This is because electrons close together will tend to align their spins. This phenomenon is known as <b>Hund’s first rule. </b>
         </p>
+ <div class="float-right clear-left relative mr-[-30rem] border-l-4 w-[25rem] bg-slate-100 p-5 font-sans leading-tight">
+            <h5 class="font-bold text-2xl font-extrabold text-blue-800">Stop to think</h5>
+            <p class="max-w-2xl my-2"><b>Alternate explanations of Hund's rule</b></p>
+            <p> In some textbooks, Hund's first rule is described to be a consequence of Pauli's exclusion principle preventing electrons from getting too close, reducing the repulsive potential between like charged electrons. However, the reasoning we gave is more accepted, as it is the Coulomb potential between an electron and a nucleus consisting of multiple positively-charged protons that turns out to be much more significant.</p>
+        </div>
 
         <p class="my-8">
 
             This phenomenon is due to two complementing effects, which will work together to reduce the total potential energy of the system. Firstly, electrons will have strong Coulomb interactions with the positively charged nucleus they orbit. However, the positive charge of the nucleus is screened by the negative charge of neighbouring electrons, which reduces the attractive potential between the electron and the nucleus. However, the neighbouring electrons can be kept at a distance when their spins aligned, as the Pauli Exclusion principle forbids them from getting too close. This reduces the screening effect.
 
         </p>
+
 
         <p class="my-8">
 
@@ -354,7 +431,7 @@
 
                 <div class="pt-5" >
                     <p class="px-5 italic text-sm ">
-                        Ising simulation code made by <a href="https://github.com/mattbierbaum/ising.js/" class="text-blue-500 underline">Matt Bierbaum</a>
+                        Ising simulation code made by <a href="https://github.com/mattbierbaum/ising.js/" target="_blank" class="text-blue-500 underline">Matt Bierbaum</a>
                     </p>
                 </div>
             </div>
@@ -365,23 +442,23 @@
             <h5 class="font-bold text-2xl font-extrabold text-blue-800">QUIZ</h5>
             <p class="max-w-4xl"><b>Q: What is the simulation's Curie temperature?</b></p>
             <ul class="p-5 space-y-3">
-                <li class="group ">
-                    <button class="shadow-md p-2 rounded-lg w-full false-ans">
+                <li class="group">
+                    <button class="shadow-md p-2 rounded-lg w-full q4-false">
                         1.3
                     </button>
                 </li>
                 <li class="group">
-                    <button class="shadow-md p-2 rounded-lg w-full false-ans">
+                    <button class="shadow-md p-2 rounded-lg w-full q4-false">
                         1.8
                     </button>
                 </li>
                 <li class="group">
-                    <button class="shadow-md p-2 rounded-lg w-full true-ans">
+                    <button class="shadow-md p-2 rounded-lg w-full " id="q4-true">
                         2.3
                     </button>
                 </li>
                 <li class="group">
-                    <button class="shadow-md p-2 rounded-lg w-full false-ans">
+                    <button class="shadow-md p-2 rounded-lg w-full q4-false">
                         2.8
                     </button>
                 </li>
@@ -440,7 +517,7 @@
 <!--            </p>-->
 <!--        </div>-->
 
-        <span class="float-right m-5 relative mr-[-5rem]">
+        <span class="float-right mx-5 my-3 relative mr-[-5rem]">
             <img alt="quantum numbers" src="public/isotope.png" class=" object-cover w-[20rem]">
             <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
             <p class="text-sm max-w-2xl">
@@ -471,9 +548,11 @@
             <img alt="Isotope Effect" src="public/energygap.png" class="object-cover w-[100%]">
             <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
             <p class="text-sm ml-2">
-
                 Above the critical temperature but at low temperatures, most of the electrons occupy the lower energy states below the Fermi energy threshold.
                 Once the critical temperature is reached, Cooper pairs start forming between electrons, and since these pairs are bound by an attractive potential, an energy gap is left in the distribution of electrons. Thus, electrons near Fermi energy threshold are not likely to make the jump over to the higher energy states.
+            </p>
+            <p class="text-sm ml-2">
+                Image adapted from [4] Rohlf, J. William. (1994).
             </p>
         </div>
 
@@ -505,28 +584,28 @@
         <blockquote class="text-xl italic text-gray-900 my-8">
             <svg aria-hidden="true" class="w-10 h-10 text-gray-400" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor" style="--darkreader-inline-fill: currentColor;" data-darkreader-inline-fill=""></path></svg>
             <p>
-                “So far, the experimental fact is that such interactions (which distinguish bosons) do not seem to exist. Let us therefore invoke Occam’s Razor and conclude, if only tentatively, that bosons of a given species are truly indistinguishable; as David Griffiths has said, even God cannot tell them apart.”
+                “So far, the experimental fact is that such interactions (which distinguish bosons) do not seem to exist. Let us therefore invoke Occam’s Razor and conclude, if only tentatively, that bosons of a given species are truly indistinguishable; as David Griffiths has said, even God cannot tell them apart.” - Daniel Schroeder
             </p>
         </blockquote>
 
         <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
-            Writing Credits
+            Credits
         </h2>
 
          <ol class="list-disc list-outside pl-5">
             <li>
                 <p>
-                    <b>A simple analogy</b> & <b>Statevectors</b>: Kannan Vishal
+                    <b class="font-extrabold text-blue-800 font-sans">A simple analogy</b> & <b class="font-extrabold text-blue-800 font-sans">Statevectors</b>: Kannan Vishal
                 </p>
             </li>
             <li>
                 <p>
-                    <b>Video: Combinatorics, Fermi gases and BECs</b> & <b>Fermions and Ferromagnets</b>: Tan Shi Wei
+                    <b class="font-extrabold text-blue-800 font-sans">Video: Combinatorics, Fermi gases and BECs</b> & <b class="font-extrabold text-blue-800 font-sans">Fermions and Ferromagnets</b>: Tan Shi Wei
                 </p>
             </li>
             <li>
                 <p>
-                    <b>Bosons and Superconductivity</b>: Tan Cher Hean
+                    <b class="font-extrabold text-blue-800 font-sans"> Bosons and Superconductivity</b>: Tan Cher Hean
                 </p>
             </li>
         </ol>
@@ -534,10 +613,11 @@
         <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
             References
         </h2>
+        Uncredited images were either obtained from the public domain or created by us.
          <ol class="list-decimal list-outside pl-5 mb-16">
             <li>
                 <p>
-                    Schroeder, Daniel V. An Introduction to Thermal Physics. 1st ed. Oxford University Press, 2021. https://doi.org/10.1093/oso/9780192895547.001.0001.
+                    Schroeder, Daniel V. An Introduction to Thermal Physics. 1st ed. Oxford University Press, 2021.
                 </p>
             </li>
             <li>
@@ -555,28 +635,129 @@
                      Nave, Carl Rod. Hyperphysics. http://hyperphysics.phy-astr.gsu.edu/hphys.html (accessed 4 October 2022).
                  </p>
              </li>
+              <li>
+                 <p>
+                     Rohlf, J. William. (1994). Modern Physics from α to Z°. New York (N.Y.): Wiley.
+                 </p>
+             </li>
+           <li>
+                 <p>
+                     Simon, Steven H. The Oxford Solid State Basics. 1st ed. Oxford: Oxford University Press, 2013.
+                 </p>
+             </li>
         </ol>
     </div>
 
-    <script>
+        <script>
+			    const q1true = document.querySelector('#q1-true');
+			    const q1false = document.querySelector('.q1-false');
+			    let attempted1 = false;
+			    q1true.addEventListener('click', () => {
+				    if (attempted1) return
+				    attempted1 = true
+				    q1true.classList.add('bg-green-500');
+				    q1true.classList.add('text-white');
+			    });
+			    q1false.addEventListener('click', () => {
+				    if (attempted1) return
+				    attempted1 = true
+				    q1false.classList.add('bg-red-500');
+				    q1false.classList.add('text-white');
+				    q1true.classList.add('bg-green-500');
+				    q1true.classList.add('text-white');
+			    })
+			    const q2true = document.querySelector('#q2-true');
+			    const q2false = document.querySelector('.q2-false');
+			    let attempted2 = false;
+                			    q2true.addEventListener('click', () => {
+				    if (attempted2) return
+				    attempted2 = true
+				    q2true.classList.add('bg-green-500');
+				    q2true.classList.add('text-white');
+			    });
+			    q2false.addEventListener('click', () => {
+				    if (attempted2) return
+				    attempted2 = true
+				    q2false.classList.add('bg-red-500');
+				    q2false.classList.add('text-white');
+				    q2true.classList.add('bg-green-500');
+				    q2true.classList.add('text-white');
+			    })
 
-			const trueans = document.querySelector('.true-ans');
-			const falseans = document.querySelector('.false-ans');
+			    const q3true = document.querySelector('#q3-true');
+			    const q3false = document.querySelector('.q3-false');
+			    let attempted3 = false;
+			    q3true.addEventListener('click', () => {
+				    if (attempted3) return
+				    attempted3 = true
+				    q3true.classList.add('bg-green-500');
+				    q3true.classList.add('text-white');
+			    });
+			    q3false.addEventListener('click', () => {
+				    if (attempted3) return
+				    attempted3 = true
+				    q3false.classList.add('bg-red-500');
+				    q3false.classList.add('text-white');
+				    q3true.classList.add('bg-green-500');
+				    q3true.classList.add('text-white');
+			    })
 
-			trueans.addEventListener('click', () => {
-				trueans.classList.add('bg-green-500');
-				trueans.classList.add('text-white');
-			});
+			    const q4true = document.querySelector('#q4-true');
+			    const q4false = document.querySelector('.q4-false');
+			    let attempted4 = false;
+			    q4true.addEventListener('click', () => {
+				    if (attempted4) return
+				    attempted4 = true
+				    q4true.classList.add('bg-green-500');
+				    q4true.classList.add('text-white');
+			    });
+			    q4false.addEventListener('click', () => {
+				    if (attempted4) return
+				    attempted4 = true
+				    q4false.classList.add('bg-red-500');
+				    q4false.classList.add('text-white');
+				    q4true.classList.add('bg-green-500');
+				    q4true.classList.add('text-white');
+			    })
 
-			falseans.addEventListener('click', () => {
-				console.log('yeah')
-				falseans.classList.add('bg-red-500');
-				falseans.classList.add('text-white');
-				trueans.classList.add('bg-green-500');
-				trueans.classList.add('text-white');
-			});
 
-    </script>
+                const q5true = document.querySelector('#q5-true');
+                const q5false = document.querySelector('.q5-false');
+                let attempted5 = false;
+                q5true.addEventListener('click', () => {
+                    if (attempted5) return
+                    attempted5 = true
+                    q5true.classList.add('bg-green-500');
+                    q5true.classList.add('text-white');
+                });
+                q5false.addEventListener('click', () => {
+                    if (attempted5) return
+                    attempted5 = true
+                    q5false.classList.add('bg-red-500');
+                    q5false.classList.add('text-white');
+                    q5true.classList.add('bg-green-500');
+                    q5true.classList.add('text-white');
+                })
+                const q6true = document.querySelector('#q6-true');
+                const q6false = document.querySelector('.q6-false');
+                let attempted6 = false;
+                q6true.addEventListener('click', () => {
+                    if (attempted6) return
+                    attempted6 = true
+                    q6true.classList.add('bg-green-500');
+                    q6true.classList.add('text-white');
+                });
+                q6false.addEventListener('click', () => {
+                    if (attempted6) return
+                    attempted6 = true
+                    q6false.classList.add('bg-red-500');
+                    q6false.classList.add('text-white');
+                    q6true.classList.add('bg-green-500');
+                    q6true.classList.add('text-white');
+                })
+        </script>
+
+
 </main>
 </body>
 </html>
