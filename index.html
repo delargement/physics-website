@@ -55,7 +55,7 @@
             <img alt="billiard table" src="public/billiard%201.svg" class="object-cover">
             <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
             <p class="text-sm ml-2">
-                Sample caption
+                Two balls heading in the diagonal directions will collide and land in their respective holes.
             </p>
         </div>
 
@@ -84,7 +84,7 @@
             <img alt="billiard table" src="public/billiard%202.svg" class="object-cover">
             <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
             <p class="text-sm ml-2">
-                Sample caption
+                Quantum mechanics forbids exact trajectories of the billiard balls, so at the end of process, we can't tell which ball ended up where.
             </p>
         </div>
 
@@ -100,14 +100,16 @@
             However, there is one way to know for sure, which is to reach into the billiard holes and check them for oneself. But up until then, we don’t know whether the system’s state is in (top = A, bottom = B) or (top = B, bottom = A). (for brevity, we’ll specify these states as \(\ket{AB}\) and \(\ket{BA}\) respectively, inspired by typical quantum physics notation). So how do we move forward?
         </p>
 
-        <div class="float-right clear-left relative mr-[-20rem] border-l-4 w-[15rem] bg-slate-100 p-5 font-sans">
+        <div class="float-right clear-left relative mr-[-30rem] border-l-4 w-[25rem] bg-slate-100 p-5 font-sans leading-tight">
             <h5 class="font-bold text-2xl font-extrabold text-blue-800">Stop to think</h5>
-            <p class="max-w-2xl"><b>Why square root?</b></p>
-            <p>fjdkjf dklfj dskj </p>
+            <p class="max-w-2xl"><b>Why complex?</b></p>
+            <p>
+                It may seem strange how we choose to associate a state with a complex number, which we have to square to get the state's probability. Why not just associate the state with the real probability directly? Well, it will turn out that when the mathematical formalism of quantum mechanics was conceived, the complex plane was found to have a number of convenient algebraic properties. For one thing, the complex plane is algebraically closed, unlike the real numbers, meaning all polynomials in one variable with complex coefficients can be reduced to linear factors, whereas you can't do that with \( x^2 + x + 1 \) using the real numbers. This suggests that there are 'holes' in the real number line, and this can cause trouble. For instance, when solving for the eigenvalues in an eigensystem by finding the roots of a characteristic equation. See this <a href="https://youtu.be/kdg4mDT6ayA">video</a> for more on why a quantum theory with just real numbers will never be complete.
+            </p>
         </div>
 
         <p class="my-8">
-            The trick is to describe the system probabilistically, using the framework statevectors. Suppose a system can take on any number of states \(\ket{i}\), each with probability \(|a_i|^2\) for some (complex) number \(a_i\). Then the system’s state can be written as the statevector \(\ket{\psi} = a_1 \ket{1} + a_2 \ket{2} + \ldots \). This encodes all the information of the system.
+            The trick is to describe the system probabilistically, using the framework of statevectors. Suppose a system can take on any number of states \(\ket{i}\), each with probability \(|a_i|^2\) for some (complex) number \(a_i\). Then the system’s state can be written as the statevector \(\ket{\psi} = a_1 \ket{1} + a_2 \ket{2} + \ldots \). This encodes all the information of the system.
         </p>
 
         <p class="my-8">
@@ -120,15 +122,16 @@
 
 
 
-        <div class="float-right clear-left relative mr-[-20rem] border-l-4 w-[15rem] bg-slate-100 p-5 font-sans">
-            <h5 class="font-bold text-2xl font-extrabold text-blue-800">Stop to think</h5>
-            <p class="max-w-2xl leading-tight"><b>When is a particle a boson or a fermion?</b></p>
-            <p>fjdkjf dklfj dskj </p>
-        </div>
-
         <p class="my-8">
             Particles which obey the former relation are called <b>bosons</b>, while particles which obey the latter are <b>fermions</b>. But as we’ll see this minute difference in sign makes all the difference!
         </p>
+
+        <div class="float-right clear-left relative mr-[-30rem] border-l-4 w-[25rem] bg-slate-100 p-5 font-sans leading-tight">
+            <h5 class="font-bold text-2xl font-extrabold text-blue-800">Stop to think</h5>
+            <p class="max-w-2xl leading-tight"><b>When is a particle a boson or a fermion?</b></p>
+            <p> Quantum particles have this property called 'spin', characterized by an integer or half-integer, which is a measure of its intrinsic angular momentum. Bosons are particles with integer spin, and fermions are those with half-integer spin. This neat relation between indistinguishability and spin is unfortunately a result which requires knowledge of quantum electrodynamics.</p>
+        </div>
+
 
         <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
             Properties of Bosons and Fermions
@@ -172,7 +175,7 @@
             For electrons orbiting the nucleus, there are four numbers that ‘serialize’ an electron. We call them the <b>Quantum numbers.</b>
         </p>
         <div class="">
-            <img alt="billiard table" src="public/qmseries.png" class="object-cover">
+            <img alt="quantum numbers" src="public/qmseries.png" class="object-cover">
             <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
             <p class="text-sm ml-2">
                 Quantum numbers of an electron orbiting a nucleus.
@@ -189,7 +192,7 @@
         </p>
 
         <div class="">
-            <img alt="billiard table" src="public/orbitals.png" class="object-cover">
+            <img alt="orbitals" src="public/orbitals.png" class="object-cover">
             <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
             <p class="text-sm ml-2">
                 Electron orbitals of varying principal, magnetic and angular quantum numbers.
@@ -226,6 +229,7 @@
             Within a ferromagnetic metal, high school chemistry class would tell you that the structure consists of large metallic ions and a sea of delocalized electrons. But as we learned, these electrons also act as tiny magnetic dipoles. Each electron doesn’t have a particularly strong magnetic field but add up the field across the electron sea and you can obtain a strong ferromagnet.
 
         </p>
+
         <p class="my-8">
             This only works when most of the electron spins are in a single direction. Otherwise, there would be no <i>net</i> magnetic field as we zoom out.
         </p>
@@ -357,9 +361,9 @@
         </div>
         <script src="ising.js"></script>
 
-        <div class="float-right clear-left relative mr-[-20rem] border-l-4 w-[15rem] bg-slate-100 p-5 font-sans">
+        <div class="float-right clear-left relative mr-[-25rem] border-l-4 w-[20rem] bg-slate-100 p-5 font-sans">
             <h5 class="font-bold text-2xl font-extrabold text-blue-800">QUIZ</h5>
-            <p class="w-[25rem]"><b>Q: What is the simulation's Curie temperature?</b></p>
+            <p class="max-w-4xl"><b>Q: What is the simulation's Curie temperature?</b></p>
             <ul class="p-5 space-y-3">
                 <li class="group ">
                     <button class="shadow-md p-2 rounded-lg w-full false-ans">
@@ -428,15 +432,21 @@
             We can make some sense of the strange properties using the theory of bosons. This may seem strange since the charge carriers producing the current, are electrons, which are fermions. However, something neat occurs at low temperatures.
         </p>
 
-        <div class="float-right clear-left relative mr-[-30rem] w-[25rem]">
-            <img alt="Isotope Effect" src="public/isotope.png" class="object-cover w-[100%]">
-            <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
-            <p class="text-sm ml-2">
-                The Isotope Effect, pointing out the negative correlation between the superconducting transition temperature and the mass of the superconducting metal isotope paved the way for the BCS theory of superconductivity.
-                Image credit: <a href="http://hyperphysics.phy-astr.gsu.edu/hbase/Solids/coop.html" class="text-blue-500 underline">Hyperphysics</a>
+<!--        <div class="float-right clear-left relative mr-[-30rem] w-[25rem]">-->
+<!--            <img alt="Isotope Effect" src="public/isotope.png" class="object-cover w-[100%]">-->
+<!--            <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">-->
+<!--            <p class="text-sm ml-2">-->
 
+<!--            </p>-->
+<!--        </div>-->
+
+        <span class="float-right m-5 relative mr-[-5rem]">
+            <img alt="quantum numbers" src="public/isotope.png" class=" object-cover w-[20rem]">
+            <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
+            <p class="text-sm max-w-2xl">
+                Isotope Effect. Image credit: <a href="http://hyperphysics.phy-astr.gsu.edu/hbase/Solids/coop.html" class="text-blue-500 underline">Hyperphysics</a>
             </p>
-        </div>
+        </span>
 
         <p class="my-8">
             Experimentally, physicists found that superconductivity sets in abruptly at a certain critical temperature, specific to the metal. In particular, the critical temperature increased with decreasing mass of the metal isotope. This was considered strange, why was an electric property, the critical temperature at which the resistance of the metal vanishes, dependent on a mechanical property of the metal, its isotopic mass? It was as if there was some interaction occurring between the charge-carrying electrons and positive metal ions responsible for inducing superconductivity, which becomes more significant, the less massive the metal isotopes.
@@ -445,9 +455,28 @@
             Three physicists, John Bardeen, Leon Cooper, and John Robert Schrieffer took note of this discovery, known as the <b>Isotope effect,</b> and were led to develop their Nobel prize-winning BCS theory of superconductivity. They hypothesized that the positive metal ions form a lattice structure, which oscillate in response to passing negatively charged electrons, due to the usual Coulomb attraction. The movement of positive ions towards the electron screens its negative charge, resulting in a net attraction of other electrons towards the screened electron.
         </p>
 
+        <div class="">
+            <img alt="orbitals" src="public/overscreening.png" class="object-cover">
+            <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
+            <p class="text-sm ml-2">
+                Moving electrons cause ripples in the surrounding metal cation structures, which overscreens the negative charge of the moving electron and pulls in nearby electrons.
+            </p>
+        </div>
+
         <p class="my-8">
              However, this attractive force is very small, on the order of a few milli-electron volts, so this only becomes important only at low temperatures. In addition, at low temperatures very few electrons are freely moving as the rest occupy the ground state, (This is a property of fermions discussed in the video), so usually each electron is only bound to one other electron, which we call a <b>Cooper pair.</b>
         </p>
+
+        <div class="float-right clear-left relative mr-[-30rem] w-[25rem]">
+            <img alt="Isotope Effect" src="public/energygap.png" class="object-cover w-[100%]">
+            <hr class="mt-6 mb-3 h-[7.5px] border-0 bg-yellow-500 w-24 ml-2">
+            <p class="text-sm ml-2">
+
+                Above the critical temperature but at low temperatures, most of the electrons occupy the lower energy states below the Fermi energy threshold.
+                Once the critical temperature is reached, Cooper pairs start forming between electrons, and since these pairs are bound by an attractive potential, an energy gap is left in the distribution of electrons. Thus, electrons near Fermi energy threshold are not likely to make the jump over to the higher energy states.
+            </p>
+        </div>
+
         <p class="my-8">
             Cooper pairs are special because they can be treated as bosons, although they are made of two fermions. This is because each electron has a half-integer spin number, so the sum of the spins of a pair of electrons will always result in an integer spin number, which is characteristic of a boson. While whether Cooper pairs can be considered bosons is a controversial issue, the point is that Cooper pairs can undergo a similar condensation process as Bose-Einstein Condensates (BECs) (See the video for more on BECs). That is, past a certain critical temperature, most of the cooper pairs will all occupy low-level energy states below a certain threshold known as the <b>Fermi Energy.</b>
         </p>
@@ -470,11 +499,11 @@
         </p>
 
         <p class="my-8">
-            Daniel Schroeder put this in words so eloquently that I felt the need to reproduce them for this article.
+            Daniel Schroeder described this in words so eloquently that we reproduced them for this article.
         </p>
 
-        <blockquote class="text-xl italic text-gray-900 dark:text-white">
-            <svg aria-hidden="true" class="w-10 h-10 text-gray-400 dark:text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor" style="--darkreader-inline-fill: currentColor;" data-darkreader-inline-fill=""></path></svg>
+        <blockquote class="text-xl italic text-gray-900 my-8">
+            <svg aria-hidden="true" class="w-10 h-10 text-gray-400" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor" style="--darkreader-inline-fill: currentColor;" data-darkreader-inline-fill=""></path></svg>
             <p>
                 “So far, the experimental fact is that such interactions (which distinguish bosons) do not seem to exist. Let us therefore invoke Occam’s Razor and conclude, if only tentatively, that bosons of a given species are truly indistinguishable; as David Griffiths has said, even God cannot tell them apart.”
             </p>
@@ -484,11 +513,49 @@
             Writing Credits
         </h2>
 
+         <ol class="list-disc list-outside pl-5">
+            <li>
+                <p>
+                    <b>A simple analogy</b> & <b>Statevectors</b>: Kannan Vishal
+                </p>
+            </li>
+            <li>
+                <p>
+                    <b>Video: Combinatorics, Fermi gases and BECs</b> & <b>Fermions and Ferromagnets</b>: Tan Shi Wei
+                </p>
+            </li>
+            <li>
+                <p>
+                    <b>Bosons and Superconductivity</b>: Tan Cher Hean
+                </p>
+            </li>
+        </ol>
+
         <h2 class="font-extrabold text-4xl font-sans my-5 text-blue-800">
             References
         </h2>
-
-
+         <ol class="list-decimal list-outside pl-5 mb-16">
+            <li>
+                <p>
+                    Schroeder, Daniel V. An Introduction to Thermal Physics. 1st ed. Oxford University Press, 2021. https://doi.org/10.1093/oso/9780192895547.001.0001.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Shankar, Ramamurti. Principles of Quantum Mechanics. 2nd ed. New York: Plenum Press, 1994.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Ashcroft, N. W. and Mermin, N. D.. Solid State Physics. : Holt-Saunders, 1976.
+                </p>
+            </li>
+             <li>
+                 <p>
+                     Nave, Carl Rod. Hyperphysics. http://hyperphysics.phy-astr.gsu.edu/hphys.html (accessed 4 October 2022).
+                 </p>
+             </li>
+        </ol>
     </div>
 
     <script>
